@@ -1,15 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Classify from '../components/classify/Classify.vue'
 
 Vue.use(Router)
-
 export default new Router({
   routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+    {path:'',redirect:'/classify'},
+    {path: '/classify',name: 'classify',component: Classify},
+    {path:'**',redirect:'/classify'}
+    
   ]
 })
