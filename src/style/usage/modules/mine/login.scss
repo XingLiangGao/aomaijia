@@ -1,0 +1,85 @@
+.app-login{
+    background: #fff;
+    height: 100vh;
+    .exit{
+        display: block;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        color: rgb(246, 169, 191);
+        overflow: hidden;
+        .exitt{font-weight: 100;
+        font-size: 0.3rem; }
+    }
+    .logo{
+        text-align: center;
+        padding: 0.3rem 0 0.3rem 0;
+        img{height: 0.94rem;}
+    }
+    .login{
+        width: 100%;
+        height: 1.19rem;
+        padding:0 0.1rem;
+        border-top:1px solid #F2F2F2;
+        border-bottom:1px solid #F2F2F2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        div{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            input{
+                // border:0;
+                width: 60%;
+                height: 0.4rem;
+                font-size: .2rem;
+                border: 0;
+                margin-left: 5%;
+            }
+           
+        }
+        div:nth-of-type(1){
+            border-bottom:1px solid #F2F2F2;
+        }
+        i{
+            font-size: 24px;
+            color: #DEDEDE;
+            padding-right: 0.05rem;
+        }
+        .eye{padding-left: 0.1rem;font-size: 44px;color: #666;}
+        .close{padding-left: 0.1rem;font-size: 18px;color: #C2C2C2;}
+    }
+    .submit{
+        margin: 0.2rem auto 0;
+        width: 93%;
+        height: 0.5rem;
+        border: none;
+        border-radius: 3px;
+        background-color: #f03468;
+        color: #fff;
+        text-align: center;
+        font-size: .2rem;
+        line-height: 0.5rem;
+    }
+    .forgetpassword{
+        display: flex;
+        width: 93%;
+        margin: 0.2rem auto 0;
+        justify-content: space-between;
+        font-size: 16px;
+        color: #666;
+    }
+    .p1{
+        color: #f03468;
+    }
+    .three-login{
+        display: flex;
+        width: 20%;
+        margin:auto;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #666;
+        padding-top:0.8rem;
+    }
+}

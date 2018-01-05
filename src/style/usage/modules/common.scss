@@ -1,9 +1,15 @@
-// @font-face {
-//     font-family: 'yofont';
-//     src: 
-//     url('')
-// }
-
+@font-face {
+    font-family: 'yofont';
+    src:  
+    url('/static/iconfont.woff') format('woff'),
+    url('/static/iconfont.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'yofont';
+    src:  
+    url('/static/iconfont2.woff') format('woff'),
+    url('/static/iconfont2.ttf') format('truetype')
+}
 html,body {
     height: 100%;
 }
