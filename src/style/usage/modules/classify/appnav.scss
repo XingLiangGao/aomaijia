@@ -1,0 +1,18 @@
+.app-nav {
+    width:0.91rem;
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+            height: 0.91rem;
+            text-align: center;
+            line-height: 0.91rem;
+            font-size: 0.12rem;
+            color: #A9A9A9;
+        }
+        .backgrou{
+            background: #fff;
+            @include border(0 0 1px 0,#F89AB4);
+        }
+    }
+}
