@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // @font-face {
 //     font-family: 'yofont';
 //     src: 
@@ -6,4 +7,13 @@
 
 html,body {
     height: 100%;
+=======
+@font-face {
+  font-family: 'yofont';
+  src:
+  url('/static/iconfont.woff') format('woff'),
+  url('/static/iconfont.ttf') format('truetype'),
+  url('/static/iconfont(2).woff') format('woff'),
+  url('/static/iconfont(2).ttf') format('truetype')
+>>>>>>> fj
 }
