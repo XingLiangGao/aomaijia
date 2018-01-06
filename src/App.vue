@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
-=======
+
 <template lang="html">
-	<div class="container">
+	<div  id="app" class="container">
 	   
 	    <router-view></router-view>
    </div>
->>>>>>> fj
 </template>
 
 <script>
@@ -28,12 +22,7 @@
 </script>
 
 <style lang="scss">
-<<<<<<< HEAD
 #app{
   height: 100%;
 }
 </style>
-=======
-	
-</style>
->>>>>>> fj

@@ -9,7 +9,7 @@ import './style/usage/app.scss'
 
 import store from './store'
 
-import './style/usage/app.scss'
+import './style/usage/app.scss' 
 
 Vue.config.productionTip = false
 
