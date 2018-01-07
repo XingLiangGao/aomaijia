@@ -5,6 +5,10 @@ import App from './App'
 // import Classify from './components/classify/Classify.vue'
 import router from './router' 
 
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
+
 import './style/usage/app.scss'
 
 import store from './store'

@@ -1,0 +1,81 @@
+.app-personal{
+    background: #fff;
+    height: 100vh;
+    .top{
+        background: url(//s1.aomygodstatic.com/gshop/images/my-center/index-bg1.jpg?v=6b49d6467511412d) no-repeat;
+        background-size: cover;
+        height: 2.4rem;
+        .exit{
+            display: flex;
+            justify-content: space-between;
+            padding:0.1rem;
+            font-size: 22px;
+            color: #fff;
+        }
+        .photo{
+            text-align: center;
+            img{
+                width: 0.7rem;
+                height: 0.7rem;
+            }
+            p{
+                color: #fff;
+                padding-top: 0.2rem;
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+            height: 0.6rem;
+            background: rgba(255,255,255,0.3);
+            margin-top: 16px;
+            li{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #F03468; 
+                i{
+                  font-size: 16px;  
+                }
+                margin-top: 10px;
+            }
+        }
+    }
+    .bottom{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                display: flex;
+                flex-direction: column;
+                width: 33.33%;
+                align-items: center; 
+                justify-content: center;
+                height: 1.4rem;
+                span{
+                    margin:20px;
+                } 
+                i{
+                    font-size: 28px;
+                    color: #FEC5D1;
+                }  
+                .tt{
+                    color: #FFE081;
+                }
+            }
+        }
+        .logout{
+            display: block;
+            width: 60%;
+            color: #fff;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            border-radius: 5px;
+            background: red;
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
+            border: 0;
+        }
+    }
+}

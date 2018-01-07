@@ -10,20 +10,20 @@
             <div class="login">
                 <div>
                     <i class="yo-ico">&#xe63a;</i>
-                    <input type="text">
+                    <input type="text" v-model="username">
                     <i class="yo-ico close">&#xe705;</i>
                 </div>
                 <div>
                     <i class="yo-ico">&#xe610;</i>
-                    <input type="password">
+                    <input type="password" v-model="password">
                     <i class="yo-ico close">&#xe705;</i>
                     <i class="yo-ico eye">&#xe611;
 </i>
                 </div>
             </div>
-            <div class="submit">登录</div>
+            <button class="submit" type="submit">登录</button>
             <div class="forgetpassword">
-                <span class="p1">注册</span>
+                <router-link class="p1" to="register">注册</router-link>
                 <span>忘记密码</span>
             </div>
             <div class="three-login">
@@ -35,8 +35,30 @@
 </template>
 
 <script>
+import {Toast} from 'mint-ui'
 export default {
-  name:'app-login'
+  name:'app-login',
+  data(){
+      return {
+          username:'',
+          password:''
+      }
+  },
+  methods:{
+      login(){
+          let that = this
+          setTimeout(() => {
+              if(that.username != '123' || that.password != '456'){
+                  Toast("密码错误，登录失败")
+                  return false;
+              }
+              Toast("登录成功")
+              let data = {user_id:12345,username:that.username}
+              that.$store.commit('changeUserInFo',data)
+              that.$router.replace({name:'personal'})
+          },500)
+      }
+  }
 }
 </script>
 

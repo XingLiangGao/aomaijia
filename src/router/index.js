@@ -5,6 +5,7 @@ import AppLogin from '../components/mine/AppLogin.vue'
 import AppMine from '../components/mine/AppMine.vue'
 import AppPersonal from '../components/mine/AppPersonal.vue'
 import AppRegister from '../components/mine/AppRegister.vue'
+import AppPress from '../components/mine/AppPress.vue'
 
 Vue.use(Router)
 export default new Router({
@@ -13,13 +14,16 @@ export default new Router({
     {path: '/classify',name: 'classify',component: Classify},
     {path: '/mine',component: AppMine,children:[
       {path:'',redirect:to => {
-        return {name:'personal'}
+        if(!localStorage.user_info){
+          return {name:'login'}
+        }else{
+          return {name:'personal'}
+        }
       }},      
       {path:'login',name:'login',component:AppLogin},
       {path:'personal',name:'personal',component:AppPersonal},
-      {path:'register',name:'register',component:AppRegister}
-    ]},
-    {path:'**',redirect:'/classify'}
-    
+      {path:'register',name:'register',component:AppRegister},
+      {path:'press',name:'press',component:AppPress}
+    ]}
   ]
 })
