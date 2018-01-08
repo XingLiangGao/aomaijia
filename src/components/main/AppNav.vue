@@ -38,6 +38,7 @@
 <style lang="scss" scoped>
 		.app-nav{
             height: 0.915rem;
+			width: 100%;
             ul{
                 width: 100%;
                 height: 100%;
@@ -46,7 +47,7 @@
                     flex: 1;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: space-between;
                     align-items: center;
                         .i-tools{
                             height: .4rem;

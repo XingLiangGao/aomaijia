@@ -21,15 +21,15 @@ export default new Router({
     },
      {
       path: '/Car',
-      name: 'Car',
+      name: 'car',
       component: Car
     }, {
       path: '/My',
-      name: 'My',
+      name: 'my',
       component: My
     },
     {path:'/AppSearch',
-    name:'AppSearch',
+    name:'search',
     component:AppSearch}
   ]
 })

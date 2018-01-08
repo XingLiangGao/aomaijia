@@ -5,15 +5,15 @@
 						<i class="yo-ico">&#xe61a;</i>
 						<b>首页</b>
 					</router-link>
-					<router-link to="/Classify" tag="li">
+					<router-link to="classify" tag="li">
 						<i class="yo-ico">&#xe61f;</i>
 						<b>分类</b>
 					</router-link>
-					<router-link to="/Car" tag="li">
+					<router-link to="car" tag="li">
 						<i class="yo-ico">&#xe62e;</i>
 						<b>购物车</b>
 					</router-link>
-					<router-link to="/My" tag="li">
+					<router-link to="my" tag="li">
 						<i class="yo-ico">&#xe60f;</i>
 						<b>我的</b>
 					</router-link>

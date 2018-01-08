@@ -7,7 +7,7 @@
 <script>
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .box2{
 	height: 800px;
 	width: 100%;

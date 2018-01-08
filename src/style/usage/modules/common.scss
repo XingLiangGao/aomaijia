@@ -13,4 +13,10 @@ html,body {
       url('/static/iconfont3.woff') format('woff'),
       url('/static/iconfont3.ttf') format('truetype')
     }
+    @font-face {
+      font-family: 'yofont';
+      src:
+      url('/static/iconfont2.woff') format('woff'),
+      url('/static/iconfont2.ttf') format('truetype')
+    }
 }
