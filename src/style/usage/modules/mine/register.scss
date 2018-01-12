@@ -1,0 +1,111 @@
+.app-register{
+    height: 100vh;
+    background: #fff;
+    .top{
+        display: flex;
+        justify-content: space-between;
+        padding:0.1rem;
+        font-size: 18px;
+        align-items: center;
+        div{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+        i{
+            font-size: 20px;
+            color: #F14374;
+        }
+        strong{
+            font-weight: normal;
+            color: #F14374;
+            font-size: 16px;
+        }
+    }
+    .login{
+        width: 100%;
+        height: 1.8rem;
+        padding:0 0.1rem;
+        border-top:1px solid #F2F2F2;
+        border-bottom:1px solid #F2F2F2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .mint-cell{
+            width: 259px;
+        }
+        div{
+            height: 50%;
+            display: flex;
+            align-items: center;
+            mt-field{
+                // border:0;
+                width: 60%;
+                height: 0.4rem;
+                font-size: .2rem;
+                border: 0;
+                margin-left: 5%;
+            }
+            .mint-cell-wrapper,.mint-cell:last-child{
+                background-image: none;
+            }
+            .mint-field{
+                align-items: center;
+            }
+        }
+        div:nth-of-type(1){
+            border-bottom:1px solid #F2F2F2;
+        }
+        .two{
+            border-bottom:1px solid #F2F2F2;
+        }
+        i{
+            font-size: 24px;
+            // 
+            color: #989898;
+            padding-right: 0.05rem;
+        }
+        .mint-field-other{
+            margin-left: 0.1rem;
+        }
+        .code{
+            font-size: 16px;
+        }
+        .close{
+            font-size: 16px;
+        }
+        .eye{
+            padding-left: 10px;
+            font-size: 30px;
+            color: #000;
+            opacity: 0.6;
+        }
+    }
+    >P{
+        color: #ABABAB;
+        padding:20px 10px;
+        font-size: 16px;
+        span{
+            color: #6F9BCC;
+        }
+    }
+    .ensure{
+        width: 90%;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        font-size: 20px;
+        margin: auto;
+        background: #F03468;
+    }
+    .pass{
+        width: 90%;
+        margin: auto;
+        height: 60px;
+        line-height: 60px;
+        color: #ABABAB;
+        text-align: right;
+        font-size: 14px;
+    }
+}

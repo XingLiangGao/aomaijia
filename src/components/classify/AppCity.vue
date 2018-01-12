@@ -21,9 +21,9 @@ export default {
       fetch('http://localhost:8080/api/list')
       .then((response) => response.json())
       .then((res) => {
-          console.log(res)
+        //   console.log(res)
           this.list = res.data.citysbrand
-          console.log(this.list)
+        //   console.log(this.list)
       })
   }
 }
