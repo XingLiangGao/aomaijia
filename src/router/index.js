@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Classify from '../components/classify/Classify.vue'
+import Classify from '@/components/classify/Classify.vue'
 import AppLogin from '../components/mine/AppLogin.vue'
 import AppMine from '../components/mine/AppMine.vue'
 import AppPersonal from '../components/mine/AppPersonal.vue'
