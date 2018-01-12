@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "utf-8";
 @import "classes";
 
@@ -30,4 +31,38 @@
 	animation-timing-function: ease-in;
 	-webkit-animation-name: speed-out-left;
 	animation-name: speed-out-left;
+=======
+@charset "utf-8";
+@import "classes";
+
+/**
+ * @module speed
+ * @description 定义从左侧快速出去动画
+ * @method speed-out-left
+ */
+@-webkit-keyframes speed-out-left {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translate3d(-100%, 0, 0) skewX(-30deg);
+		opacity: 0;
+	}
+}
+@keyframes speed-out-left {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate3d(-100%, 0, 0) skewX(-30deg);
+		opacity: 0;
+	}
+}
+
+.ani.speed-out-left {
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+	-webkit-animation-name: speed-out-left;
+	animation-name: speed-out-left;
+>>>>>>> 737d8122d01b93532391dac7b53467b7507d8420
 }

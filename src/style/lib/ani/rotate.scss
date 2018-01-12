@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "utf-8";
 @import "classes";
 
@@ -26,4 +27,34 @@
 .ani.rotate {
 	-webkit-animation-name: rotate;
 	animation-name: rotate;
+=======
+@charset "utf-8";
+@import "classes";
+
+/**
+ * @module rotate
+ * @description 定义旋转动画
+ * @method rotate
+ */
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotatez(0);
+    }
+    to {
+        -webkit-transform: rotatez(360deg);
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotatez(0);
+    }
+    to {
+        transform: rotatez(360deg);
+    }
+}
+
+.ani.rotate {
+	-webkit-animation-name: rotate;
+	animation-name: rotate;
+>>>>>>> 737d8122d01b93532391dac7b53467b7507d8420
 }

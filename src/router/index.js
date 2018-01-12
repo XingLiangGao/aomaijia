@@ -5,6 +5,8 @@ import Classify from '@/components/Classify'
 import Car from '@/components/Car'
 import My from '@/components/my'
 import AppSearch from '@/components/main/AppSearch'
+import AppPosition from '@/components/main/AppPosition'
+
 
 Vue.use(Router)
 
@@ -31,6 +33,12 @@ export default new Router({
     },
     {path:'/AppSearch',
     name:'AppSearch',
-    component:AppSearch}
+    component:AppSearch
+    },
+    {
+    	path:'/AppPosition',
+    	name:'AppPosition',
+    	component:AppPosition
+    }
   ]
 })

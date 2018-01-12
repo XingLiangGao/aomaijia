@@ -1,5 +1,183 @@
+html{
+    overflow: auto;
+}
 .container{
     height: 100%;
     display: flex;
     flex-direction: column;
+    
 }
+.app-main{
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            margin-bottom: .5rem;
+        }
+.app-header{
+            height: .48rem;
+            display:flex;
+            background:#fff;
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:first-child{
+                    width: 1rem;
+                }
+                &:nth-child(2){
+                     flex: 1;
+                    a{
+                        font-size: 28px;
+                        color:#333;
+                    }
+                }
+                &:last-child{
+                    width: 0.8rem;
+                    i{
+                        font-size: 0.26rem;
+                    }
+                }
+            }
+        }
+.app-banner{
+            height: 1.85rem; 
+            img{
+                 width: 100%;
+                 height: 100%;
+                 }
+        }
+.app-nav{
+            height: 0.915rem;
+            background:#fff;
+            ul{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                li{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                        .i-tools{
+                            height: .4rem;
+                            width: .4rem;
+                            img{
+                              width: 100%;
+                              height: 100%;
+                            }
+                        }
+                        span{
+                            display: block;
+                            height: 0.26rem;
+                            line-height: 0.26rem;
+                            font-size: .14rem;
+                            color: #222;
+                        }
+                }
+            }
+        }
+.app-list{
+        flex: 1;
+        flex-direction: column;
+        margin-top: .1rem;
+        display: flex;
+        background:#fff;
+        .good-list{
+                //flex: 1;
+                flex-direction: column;
+                margin-top: .1rem;
+                //display: flex;
+                background:#fff;
+                    .list-header{
+                      height: .55rem;
+                      padding-top: .2rem;
+                      padding-left: .2rem;
+                      h1{
+                          font-size: .16rem;
+                      }
+                        }
+                      .list-center{
+                          height: .2.55rem;
+                          img{
+                              height: 100%;
+                              width: 100%;
+                          }
+                      }
+                      .list-footer{
+                          height: 2.034rem;
+                          padding-left: .2rem;
+                          margin-bottom: .2rem;
+                          ul{
+                              //overflow: hidden;
+                              display: flex;
+                              height: 1.97rem;
+                              width: 100%;
+                              li{
+                                    margin-top: .2rem;
+                                    flex: 1;
+                                    height: 100%;
+                                    width: 33%;
+                                    .list-img{
+                                        width: 1rem;
+                                        height: 1rem;
+                                        margin-bottom: .16rem;
+                                        img{
+                                            height: 100%;
+                                            width: 100%;
+                                        }
+                                    }
+                                    .list-detail{
+                                        h3{
+                                            color: #555;
+                                            font-size: .12rem;
+                                            overflow: hidden;
+                                            white-space: normal;
+                                            line-height: .18rem;
+                                            height: .35rem;
+                                        }
+                                    }
+                                    .list-price{
+                                        font-size: .14rem;
+                                        color: #000;
+                                        padding: .10rem 0 .16rem;
+                                    }
+                              }
+                          }
+                      }
+                    }   
+            }  
+.app-footer{
+        width: 100%;
+        height: 0.5rem;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            border-top: 1px solid #666;
+            padding-top: 0.02rem;
+            li{
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items:center;
+                i{
+                    font-size: 0.18rem;
+                    line-break: 0.18rem;
+                }
+                b{
+                    font-size: 0.12rem;
+                    font-weight: 100;
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }

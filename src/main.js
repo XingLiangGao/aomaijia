@@ -1,5 +1,3 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
 import router from './router'
@@ -8,7 +6,29 @@ import './style/usage/app.scss'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+//mint-ui
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
+
+//iview
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
+Vue.use(iView)
+
+//element-ui
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
+
+//directives
+import './modules/directives'
+
+//swiper
+import '../node_modules/swiper/dist/css/swiper.min.css'
+
+import { provinceAndCityData, regionData, provinceAndCityDataPlus, regionDataPlus, CodeToText, TextToCode } from 'element-china-area-data'
+
 new Vue({
   el: '#app',
   router,

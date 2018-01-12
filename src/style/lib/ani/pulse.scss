@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "utf-8";
 @import "classes";
 
@@ -32,4 +33,40 @@
 .ani.pulse {
 	-webkit-animation-name: pulse;
 	animation-name: pulse;
+=======
+@charset "utf-8";
+@import "classes";
+
+/**
+ * @module other
+ * @description 定义脉冲动画
+ * @method pulse
+ */
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale3d(1, 1, 1);
+	}
+	50% {
+		-webkit-transform: scale3d(1.05, 1.05, 1.05);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+	}
+}
+@keyframes pulse {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.ani.pulse {
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+>>>>>>> 737d8122d01b93532391dac7b53467b7507d8420
 }

@@ -36,34 +36,5 @@
 </script>
 
 <style lang="scss" scoped>
-		.app-nav{
-            height: 0.915rem;
-            ul{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                li{
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                        .i-tools{
-                            height: .4rem;
-                            width: .4rem;
-                            img{
-                              width: 100%;
-                              height: 100%;
-                            }
-                        }
-                        span{
-                            display: block;
-                            height: 0.26rem;
-                            line-height: 0.26rem;
-                            font-size: .14rem;
-                            color: #222;
-                        }
-                }
-            }
-        }
+		
 </style>
