@@ -1,109 +1,118 @@
+
 <template lang="html">
 	<div class="app-list">
-				<div class="list-header">
-					<h1>9.9抢小草莓</h1>
-				</div>
-				<div class="list-center">
-					<img src="http://img04.aomygod.com/1609762c805_bc_08cb826240689b7f10eaa075eec2a636_1242x662.jpeg?imageView/0/w/640/q/85" class="jImg" style="display: inline;">
-				</div>
-				<div class="list-footer">
-							<ul>
-								<li>
-									<div class="list-img">
-										<img class="jImg" src="http://img04.aomygod.com/15d794ed24c_2_9c025dbf68b523936638db1866c746c7_719x719.jpeg?imageView/0/w/200" style="display: inline;">	
-									</div>
-									<div class="list-detail">
-										<h3>葡挞妈咪泰国Mistine小草莓变色润唇膏口</h3>
-									</div>
-									<div class="list-price">
-										￥9.90
-									</div>
-								</li>
-								<li>
-									<div class="list-img">
-										<img class="jImg" src="http://img04.aomygod.com/15d794ed24c_2_9c025dbf68b523936638db1866c746c7_719x719.jpeg?imageView/0/w/200" style="display: inline;">	
-									</div>
-									<div class="list-detail">
-										<h3>葡挞妈咪泰国Mistine小草莓变色润唇膏口</h3>
-									</div>
-									<div class="list-price">
-										￥9.90
-									</div>
-								</li>
-								<li>
-									<div class="list-img">
-										<img class="jImg" src="http://img04.aomygod.com/15d794ed24c_2_9c025dbf68b523936638db1866c746c7_719x719.jpeg?imageView/0/w/200" style="display: inline;">	
-									</div>
-									<div class="list-detail">
-										<h3>葡挞妈咪泰国Mistine小草莓变色润唇膏口</h3>
-									</div>
-									<div class="list-price">
-										￥9.90
-									</div>
-								</li>
-							</ul>
-				</div>
+		<div class="good-list"  v-for="detail in details">
+			<div class="list-header">
+				<h1>{{detail.title}}</h1>
 			</div>
+			<div class="list-center">
+				<img :src="detail.url" alt="" />
+			</div>
+			<div class="list-footer swiper-container">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<div class="list-img">
+							<img :src="detail.url1"/>
+						</div>
+						<div class="list-detail">
+							<h3>{{detail.good1}}</h3>
+						</div>
+						<div class="list-price">
+							{{detail.price1}}
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="list-img">
+							<img :src="detail.url2"/>
+						</div>
+						<div class="list-detail">
+							<h3>{{detail.good2}}</h3>
+						</div>
+						<div class="list-price">
+							{{detail.price2}}
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="list-img">
+							<img :src="detail.url3"/>
+						</div>
+						<div class="list-detail">
+							<h3>{{detail.good3}}</h3>
+						</div>
+						<div class="list-price">
+							{{detail.price3}}
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="list-img">
+							<img :src="detail.url4"/>
+						</div>
+						<div class="list-detail">
+							<h3>{{detail.good4}}</h3>
+						</div>
+						<div class="list-price">
+							{{detail.price4}}
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="list-img">
+							<img :src="detail.url5"/>
+						</div>
+						<div class="list-detail">
+							<h3>{{detail.good5}}</h3>
+						</div>
+						<div class="list-price">
+							{{detail.price5}}
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="list-img">
+							<img :src="detail.url6"/>
+						</div>
+						<div class="list-detail">
+							<h3>{{detail.good6}}</h3>
+						</div>
+						<div class="list-price">
+							{{detail.price6}}
+						</div>
+					</li>
+				</ul>
+			</div>	
+		</div>
+	</div>
 </template>
 	
 <script>
+	import Swiper from 'swiper'
+	import axios from 'axios'
 	export default{
-		name:'app-list'
+		name:'app-list',
+		data(){
+			return{
+				details:[]
+			}
+		},
+		 methods:{
+          getGoodsList () {
+          	let that = this;
+            axios.get('/static/detail.json').then((res) => {
+              console.log(res.data.details[0].title)
+              that.details = res.data.details;
+            })
+          }
+       },
+	     mounted () {
+          this.getGoodsList()
+       },
+		updated:function(){
+			   new Swiper('.swiper-container', {
+		      slidesPerView: 3,
+		      spaceBetween: 30,
+		    });
+		}
 	}
 </script>
 
 <style lang="scss" scoped>
-		.app-list{
-              flex: 1;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              .list-header{
-                  height: .55rem;
-              }
-              .list-center{
-                  height: .2.55rem;
-                  img{
-                      height: 100%;
-                      width: 100%;
-                  }
-              }
-              .list-footer{
-                  height: 2.034rem;
-                  padding-left: .2rem;
-                  ul{
-                      display: flex;
-                      height: 1.97rem;
-                      width: 100%;
-                      li{
-                            flex: 1;
-                            height: 100%;
-                            width: 33%;
-                            .list-img{
-                                width: 1rem;
-                                height: 1rem;
-                                margin-bottom: .16rem;
-                                img{
-                                    height: 100%;
-                                    width: 100%;
-                                }
-                            }
-                            .list-detail{
-                                h3{
-                                    color: #555;
-                                    font-size: .12rem;
-                                    overflow: hidden;
-                                    white-space: normal;
-                                    line-height: .18rem;
-                                }
-                            }
-                            .list-price{
-                                font-size: .12rem;
-                                color: #000;
-                                padding: .10rem 0 .16rem;
-                            }
-                      }
-                  }
-              }
-        }  
+		
 </style>

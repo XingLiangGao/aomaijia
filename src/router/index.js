@@ -15,9 +15,14 @@ import AppDetails from '../components/details/app-details.vue' // 详情
 import ImageText from '../components/details/imagetext/image-text.vue'//图片详情
 import AppEvaluate from '../components/details/evaluate/app-evaluate.vue'
 import AppShopping from '../components/shoppingCar/app-shopping.vue'//购物车
+import AppMain from '@/components/main/AppMain'
+
+import AppSearch from '@/components/main/AppSearch'
+import AppPosition from '@/components/main/AppPosition'
 
 
 Vue.use(Router)
+
 export default new Router({
   routes: [
     // {path:'',redirect:''},
@@ -40,6 +45,21 @@ export default new Router({
       {path:'personal',name:'personal',component:AppPersonal},
       {path:'register',name:'register',component:AppRegister},
       {path:'press',name:'press',component:AppPress}
-    ]}
+    ]},
+    {
+      path: '/',
+      name: 'AppMain',
+      component: AppMain
+    },
+     
+    {path:'/AppSearch',
+    name:'AppSearch',
+    component:AppSearch
+    },
+    {
+    	path:'/AppPosition',
+    	name:'AppPosition',
+    	component:AppPosition
+    }
   ]
 })

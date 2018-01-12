@@ -5,6 +5,7 @@
 	        <app-nav></app-nav>
 	        <app-list></app-list>
         <app-footer></app-footer>
+        <BackTop v-back-top v-scroll-show:30='isBackShow' :isShow='isBackShow'></BackTop>
     </div>
 </template> 
 
@@ -14,16 +15,16 @@ import AppBanner from './AppBanner'
 import AppNav from './AppNav'
 import AppList from './AppList'
 import AppFooter from './AppFooter'
-
+import BackTop from './BackTop'
     export default {
         name:'app-main',
         data(){
         	return {
-        		
+        		isBackShow:{value:false}
         	}
         },
         components: {
-            AppHeader,AppBanner,AppNav,AppList,AppFooter
+            AppHeader,AppBanner,AppNav,AppList,AppFooter,BackTop
         }
     }
 </script>
