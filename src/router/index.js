@@ -20,7 +20,7 @@ import AppShopping from '../components/shoppingCar/app-shopping.vue'//购物车
 Vue.use(Router)
 export default new Router({
   routes: [
-    {path:'',redirect:''},
+    // {path:'',redirect:''},
     {path: '/classify',name: 'classify',component: Classify},
     {path:'/detail',name:'detail',component:AppDetails},
     {path:'/imagetext',name:'imagetext',component:ImageText},

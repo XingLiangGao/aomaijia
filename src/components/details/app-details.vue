@@ -1,6 +1,6 @@
 <template>
    <div  class="app-details">
-        
+            <AppDetailshead/>
              <AppMessage/> 
             <!--轮播图-->
             <app-banner></app-banner>
@@ -19,7 +19,7 @@
                       
 	              	<i></i>
 	              </div>
-	              
+	        <DetailsBottom/>      
 	      
            
     </div>
@@ -27,11 +27,13 @@
 
 <script>
 import Swiper from 'swiper'
+import AppDetailshead from './app-detailshead'
 import AppMessage from './bacicMessage/bacic-message'
 import AppBanner from './appBanner/app-banner'
 import AppAutotrophy from './autotrophy/app-autotrophy'
 import AppGlobal from './appglobal/app-global'
 import AppSee from './appSee/app-see'
+import DetailsBottom from './detailsBottom/details-bottom'
 import axios from 'axios'
 export default {
    name : "app-details",
@@ -56,7 +58,7 @@ export default {
        	//  this.getData()
        	 
       },
-    components:{AppBanner,AppAutotrophy,AppGlobal,AppSee,AppMessage},
+    components:{AppDetailshead,AppBanner,AppAutotrophy,AppGlobal,AppSee,AppMessage,DetailsBottom},
  
      
       

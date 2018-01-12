@@ -1,5 +1,6 @@
 <template>
   <div class="app-evaluate">
+    <AppDetailshead/>
       <AppMessage/> 
       <p>
          还没有客观评论......
@@ -8,6 +9,7 @@
 </template>
 <script>
 import { Navbar, TabItem } from 'mint-ui';
+import AppDetailshead from '../app-detailshead'
 import AppMessage from '../bacicMessage/bacic-message.vue'
 export default {
   name:"app-evaluate",
@@ -17,7 +19,7 @@ export default {
     
     }
   },
-   components:{AppMessage},
+   components:{AppMessage,AppDetailshead},
   methods:{
 
   }
