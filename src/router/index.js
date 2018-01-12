@@ -7,11 +7,16 @@ import AppPersonal from '../components/mine/AppPersonal.vue'
 import AppRegister from '../components/mine/AppRegister.vue'
 import AppPress from '../components/mine/AppPress.vue'
 
+import AppList from '../components/list/AppList.vue'
+import AppListFiltrate from '../components/list/AppListFiltrate.vue'
+
 Vue.use(Router)
 export default new Router({
   routes: [
     {path:'',redirect:'/mine'},
     {path: '/classify',name: 'classify',component: Classify},
+    {path: '/list',name: 'list',component: AppList},
+    {path: '/filtrate',name: 'filtrate',component: AppListFiltrate},
     {path: '/mine',component: AppMine,children:[
       {path:'',redirect:to => {
         if(!localStorage.user_info){

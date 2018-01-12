@@ -2,7 +2,7 @@
     <div class="app-personal">
         <div class="top">
             <div class="exit">
-                <router-link class="yo-ico" to="login">&#xe6f2;</router-link>
+                <router-link class="yo-ico" to="login">&#xf07d;</router-link>
                 <router-link class="yo-ico" to="AppMain">&#xe62a;</router-link>
             </div>
             <div class="photo">

@@ -10,21 +10,18 @@
             <div class="login">
                 <div>
                     <i class="yo-ico">&#xe63a;</i>
-                    <input type="text" v-model="username">
-                    <i class="yo-ico close">&#xe705;</i>
+                    <mt-field label="" v-model="username"></mt-field>
                 </div>
                 <div>
                     <i class="yo-ico">&#xe610;</i>
-                    <input type="password" v-model="password">
-                    <i class="yo-ico close">&#xe705;</i>
-                    <i class="yo-ico eye">&#xe611;
-</i>
+                    <mt-field label="" v-model="password"></mt-field>
+                    <i class="yo-ico eye">&#xe611;</i>
                 </div>
             </div>
             <button class="submit" type="submit">登录</button>
             <div class="forgetpassword">
                 <router-link class="p1" to="register">注册</router-link>
-                <span>忘记密码</span>
+                <router-link class="p2" to="press">忘记密码</router-link>
             </div>
             <div class="three-login">
                 <span>QQ</span>
@@ -35,7 +32,8 @@
 </template>
 
 <script>
-import {Toast} from 'mint-ui'
+import { Field } from 'mint-ui';
+import {Toast} from 'mint-ui';
 export default {
   name:'app-login',
   data(){

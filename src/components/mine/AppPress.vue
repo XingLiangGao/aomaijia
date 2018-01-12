@@ -1,7 +1,7 @@
 <template>
     <div class="app-press">
         <div class="top">
-            <i class="yo-ico">&#xe6f2;</i>
+            <router-link class="yo-ico" to="login">&#xf07d;</router-link>
             <div>找回密码</div>
         </div>
         <div class="login">
@@ -10,7 +10,7 @@
                 <mt-field label="" placeholder="手机号/邮箱/用户名"></mt-field>
             </div>
             <div>
-                <i class="yo-ico">&#xe610;</i>
+                <i class="yo-ico">&#xe621;</i>
                 <mt-field placeholder="验证码">
                     <img src="" height="40px" width="100px">
                 </mt-field>

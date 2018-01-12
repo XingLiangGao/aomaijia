@@ -1,7 +1,7 @@
 <template>
     <div class="app-register">
         <div class="top">
-            <router-link class="yo-ico" to="login">&#xe6f2;</router-link>
+            <router-link class="yo-ico" to="login">&#xf07d;</router-link>
             <div>
                 <span>注册奥买家注册</span>
                 <router-link to="login">登录</router-link>
@@ -9,20 +9,17 @@
         </div>
         <div class="login">
             <div>
-                <i class="yo-ico">&#xe63a;</i>
-                <input type="text">
-                <i class="yo-ico close">&#xe705;</i>
+                <i class="yo-ico">&#xe623;</i>
+                <mt-field label="" v-model="username"></mt-field>
             </div>
-            <div>
+            <div class="two">
                 <i class="yo-ico">&#xe610;</i>
-                <input type="password">
-                <i class="yo-ico close">&#xe705;</i>
+                <mt-field label="" v-model="password"></mt-field>
                 <i class="yo-ico eye">&#xe611;</i>
             </div>
             <div>
-                <i class="yo-ico">&#xe621;</i> 
-                <input type="password">
-                <i class="yo-ico code">获取验证码</i>
+                <i class="yo-ico">&#xe621;</i>
+                <mt-field label="" v-model="username"></mt-field>
             </div>
         </div>
         <p>注册视为同意<span>奥买家注册协议</span></p>
@@ -32,6 +29,7 @@
 </template>
 
 <script>
+import { Field } from 'mint-ui';
 export default {
   name:'app-register'
 }
