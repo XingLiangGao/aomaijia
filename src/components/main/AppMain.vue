@@ -5,7 +5,7 @@
 	        <app-nav></app-nav>
 	        <app-list></app-list>
         <app-footer></app-footer>
-        <BackTop v-back-top v-scroll-show:30='isBackShow' :isShow='isBackShow'></BackTop>
+        <BackTop v-back-top v-scroll-show:300='isBackShow' :isShow='isBackShow'></BackTop>
     </div>
 </template> 
 
