@@ -6,6 +6,8 @@ Vue.use(Vuex)
 const state ={
       car:[],
       num :1,
+      showtype : true,
+      user_info:{}
 }
 const getters = {
       
@@ -71,7 +73,15 @@ const mutations = {
           state.num = 1
             console.log( state.num)
           } 
-   }
+      },
+      changeUserInFo(state,user_info){
+        state.user_info = user_info
+        localStorage.user_info = JSON.stringify(user_info)
+    },
+    exit(state){
+        state.user_info = {}
+        localStorage.removeItem('user_info')
+    }
   }
 const actions = {
    addGood({commit},parms){
