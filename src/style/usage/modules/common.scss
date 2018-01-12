@@ -16,6 +16,14 @@
     url('/static/iconfont3.woff') format('woff'),
     url('/static/iconfont3.ttf') format('truetype')
 }
+@font-face {
+    font-family: 'yofont';
+    src:  
+    url('/static/iconfont4.woff') format('woff'),
+    url('/static/iconfont4.ttf') format('truetype')
+}
+
+
 html,body {
     height: 100%;
 }

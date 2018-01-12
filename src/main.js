@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+<<<<<<< HEAD
 // import Classify from './components/classify/Classify.vue'
 import router from './router' 
 
@@ -18,6 +19,16 @@ import './style/usage/app.scss'
 import store from './store'
 
 import './style/usage/app.scss' 
+=======
+import router from './router'
+import  './style/usage/app.scss'
+import './components/modules/trans' // 旋转
+import '../node_modules/swiper/dist/css/swiper.min.css'
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+import store from './vuex/store.js'
+Vue.use(MintUI)
+>>>>>>> aj
 
 Vue.config.productionTip = false
 

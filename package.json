@@ -14,8 +14,13 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+<<<<<<< HEAD
     "element-ui": "^2.0.11",
     "mint-ui": "^2.2.13",
+=======
+    "mint-ui": "^2.2.13",
+    "swiper": "^4.0.7",
+>>>>>>> aj
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>aomaijia</name>
+=======
+	<name>sd</name>
+>>>>>>> aj
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +20,11 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
 			<id>1514289830396</id>
+=======
+			<id>1514208042920</id>
+>>>>>>> aj
 			<name></name>
 			<type>26</type>
 			<matcher>
