@@ -1,8 +1,9 @@
 <template>
     <div class="app-classify">
-        <AppNav></AppNav>
-        <AppIfy></AppIfy>
-        <AppCity></AppCity>
+        <AppNav :showtype="showtype"></AppNav>
+        <AppIfy v-if="showtype.value"></AppIfy>
+        <AppCity v-else></AppCity>
+        <AppFooter></AppFooter>
     </div>  
 </template>
 
@@ -10,10 +11,16 @@
 import AppNav from './AppNav'
 import AppIfy from './AppIfy'
 import AppCity from './AppCity'
+import AppFooter from '../main/AppFooter'
     export default {
         name : 'app-classify',
         components : {
-            AppNav,AppIfy,AppCity
+            AppNav,AppIfy,AppCity,AppFooter
+        },
+        data : function () {
+            return {
+                showtype:{value:false}
+            }
         }
     }
 </script>

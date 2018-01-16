@@ -6,7 +6,6 @@ Vue.use(Vuex)
 const state ={
       car:[],
       num :1,
-      showtype : true,
       user_info:{}
 }
 const getters = {
