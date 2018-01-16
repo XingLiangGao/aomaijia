@@ -1,8 +1,8 @@
 <template>
     <div class="app-login">
-        <div class="exit">
+        <router-link to="/" class="exit">
             <i class="yo-ico exitt">&#xf077;</i>
-        </div>
+        </router-link>
         <div class="logo">
             <img src="//ssl.aomygodstatic.com/mobile-member/images/login/login.png?v=11072350a31ca749" alt="">
         </div>

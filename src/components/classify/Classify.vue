@@ -1,8 +1,8 @@
 <template>
     <div class="app-classify">
         <AppNav></AppNav>
-        <AppIfy v-if="$store.state.showtype"></AppIfy>
-        <AppCity v-else></AppCity>
+        <AppIfy></AppIfy>
+        <AppCity></AppCity>
     </div>  
 </template>
 
