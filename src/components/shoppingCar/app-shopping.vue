@@ -5,7 +5,7 @@
                 <p>购物车</p>
                 <div class="details-right">
                     <span class="yo-ico">&#xe696;</span>
-                  <router-link>      
+                  <router-link to="/">      
                     <span class="yo-ico">&#xe525;</span>
                   </router-link>  
                 </div>
@@ -29,10 +29,7 @@
                         </router-link>    
                     </div>
                 </div>
-                <AppShopnav   v-for = "item in car " :key="item.i" :info="item" ></AppShopnav> 
-                <!-- v-for = "item in car " :key="item.i" :info="item"  -->
-                <!-- :car="cars" -->
-                <!--循环car 把数据 取出:info="item" -->
+                <AppShopnav   v-for = "item in car " :key="item.i" :info="item" ></AppShopnav>
                 <AppShopbotm v-if="car.length" ></AppShopbotm>
         </div>     
           

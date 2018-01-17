@@ -3,11 +3,11 @@
         <div class="top">
             <div class="exit">
                 <router-link class="yo-ico" to="login">&#xf07d;</router-link>
-                <router-link class="yo-ico" to="AppMain">&#xe62a;</router-link>
+                <router-link class="yo-ico" to="/">&#xe62a;</router-link>
             </div>
             <div class="photo">
                 <img src="https://img04.aomygod.com/fontend/201769/imgs/user.png" alt="">
-                <p>你好，用户{{user_info.username}}</p>
+                <p>你好，用户{{this.name}}</p>
             </div>
             <ul>
                 <li><i class="yo-ico">&#xe69b;</i><span>待付款订单</span></li>
@@ -30,15 +30,29 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
 export default {
   name:'app-personal',
-  computed:mapState(['user_info']),
-  methods:{
-      exit(){
-          this.$store.commit('exit')
-          this.$router.replace({name:'login'})
+  data() {
+      return {
+          name: '',
+          date:[]
       }
+  },
+  methods:{
+    exit(){
+        this.date.push({username:this.username,password:this.password})
+        localStorage.date=JSON.stringify(this.date)
+        this.$router.push('/mine')
+    }  
+  },
+  mounted: function () {
+        let that = this
+        var storage = window.localStorage.date;
+        var storageObj = JSON.parse(storage);
+        
+        storageObj.forEach(item=>{
+            that.name = item.username
+        })
   }
 }
 </script>
