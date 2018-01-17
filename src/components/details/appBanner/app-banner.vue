@@ -1,6 +1,6 @@
 <template>
       <!--轮播图-->
-        <div class="app-banner">
+        <div class="app-banner xc">
              <div class="bacic-banner swiper-container">
                   <div class="swiper-wrapper">
                         <div  class="swiper-slide" v-for="image in images" :key="image.id">

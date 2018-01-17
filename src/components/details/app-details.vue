@@ -1,7 +1,5 @@
 <template>
-   <div  class="app-details">
-            <AppDetailshead/>
-             <AppMessage/> 
+   <div  class="app-details">      
             <!--轮播图-->
             <app-banner></app-banner>
             <!--商品地址-->
@@ -19,50 +17,36 @@
                       
 	              	<i></i>
 	              </div>
-	        <DetailsBottom/>      
-	      
-           
     </div>
 </template>
 
 <script>
 import Swiper from 'swiper'
-import AppDetailshead from './app-detailshead'
-import AppMessage from './bacicMessage/bacic-message'
 import AppBanner from './appBanner/app-banner'
 import AppAutotrophy from './autotrophy/app-autotrophy'
 import AppGlobal from './appglobal/app-global'
 import AppSee from './appSee/app-see'
-import DetailsBottom from './detailsBottom/details-bottom'
 import axios from 'axios'
 export default {
    name : "app-details",
- 
      data:function(){
-        return{
-           isShade:false,
-        //    billboards:[]   
-        }
-  },
-  methods:{
-     getData(){
-         let that = this;
-         axios.get('/src/falseData/false.json',{}).then((response)=>{
-            console.log(response)
-              that.billboards = response.data.goodlists[0]
-              console.log(that.billboards.name)
-         })
-     }
-  },
-  created(){
-       	//  this.getData()
-       	 
-      },
-    components:{AppDetailshead,AppBanner,AppAutotrophy,AppGlobal,AppSee,AppMessage,DetailsBottom},
- 
-     
-      
-  
+            return{
+            isShade:false, 
+            }
+        },
+     components:{AppBanner,AppAutotrophy,AppGlobal,AppSee},    
+    methods:{
+        // getData(){
+        //     let that = this;
+        //     axios.get('/src/falseData/false.json',{}).then((response)=>{
+        //         console.log(response)
+        //         that.billboards = response.data.goodlists[0]
+        //         console.log(that.billboards.name)
+        //     })
+        // }
+    },
+    
+   
 }
 
 </script>  

@@ -2,12 +2,10 @@
     <div class="app-shopnav">
          <div class="shoppconent">
             <div class="shopping">
+
                   <label>
-                     <input type="checkbox"/>
+                     <input v-model="info.isSelected" type="checkbox"/>
                   </label>
-                  <!-- id,title,price1,img,tariff -->
-                  <!-- <img :src="info.img" :alt="info.id"/>     -->
-                 
                    <img :src="info.img" :alt="info.id">
                   <div class="shopRight">
                       <p>{{info.title}}</p>
@@ -26,18 +24,20 @@
    
 </template>
 <script>
-import {mapActions,mapMutations} from 'vuex'
+import {mapActions,mapMutations,mapGetters} from 'vuex'
 export default {
    name:'app-shopnav',
    props:['info'],
    methods:{
         ...mapActions(['addGood']),
-        ...mapMutations(['increment','decrement']),
+         ...mapMutations(['decrement','increment','shoppingCar']),  
+     },    
+   computed:{   
+        ...mapGetters(['decrements'])
    },
    mounted:{
-       
-   }
-
+      
+  }
 }
 </script>
 <style lang="scss" scoped>

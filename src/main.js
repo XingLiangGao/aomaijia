@@ -32,7 +32,7 @@ import { provinceAndCityData, regionData, provinceAndCityDataPlus, regionDataPlu
 
 new Vue({
   el: '#app',
-  router,
+  router,store,
   template: '<App/>',
   components: { App }
 })

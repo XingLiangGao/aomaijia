@@ -43,7 +43,7 @@ html{
                 }
             }
         }
-.app-banner{
+.main{
             height: 1.85rem; 
             img{
                  width: 100%;
@@ -155,6 +155,7 @@ html{
         width: 100%;
         height: 0.5rem;
         position: fixed;
+        z-index:500;
         bottom: 0;
         background: #fff;
         ul{

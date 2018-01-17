@@ -2,36 +2,34 @@
     <div class="app-message">
          <div class="bacic-message bacic-message">
                     <ul>
-                          <li v-for="nav in navs" :key="nav.id"  @click="turn(nav.name)" ><a href="javascript:;">{{nav.content}}</a></li>
-                          <!-- <li><a href="javascript:;">图文样式</a></li>
-                          <li><a href="javascript:;">商品评价</a></li> -->
+                          <li @click="type.value=1"><a href="javascript:;">基本信息</a></li>
+                          <li @click="type.value=2"><a href="javascript:;">图文样式</a></li>
+                          <li @click="type.value=3"><a href="javascript:;">商品评价</a></li> 
                    </ul>
         </div>
+        <AppDetails v-if="type.value==1"></AppDetails>
+        <ImageText  v-if="type.value==2"></ImageText>
+        <AppEvaluate  v-if="type.value==3"></AppEvaluate>
     </div>
 </template>
 <script>
+import AppDetails from '../app-details.vue'
+import ImageText  from '../imagetext/image-text.vue'
+import AppEvaluate from '../evaluate/app-evaluate.vue'
 export default {
      name:'app-message',
       data:function(){
            return{
-                navs:[
-                      {id:1,content:"基本信息",name:'detail'},
-                      {id:2,content:"图文样式",name:'imagetext'},
-                      {id:3,content:"商品评价",name:'appevaluate'}
-                      
-                ] 
-         }
+              
+         }   
     },
-    
+    props:['type'],
+    components:{AppDetails,ImageText,AppEvaluate},
     methods:{
-        turn(name){
-              console.log(name)
-            this.$router.push({name});
-           // this.toddleNav();
-        }
+      
        
         
-    },
+    }
 }
 </script>
 <style lang="scss" scoped>

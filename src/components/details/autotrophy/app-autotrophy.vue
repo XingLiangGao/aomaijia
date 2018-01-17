@@ -1,8 +1,7 @@
 <template>
    <div class="app-autotrophy" >
          
-           <div class="price">
-                
+           <div class="price"> 
                     <span> ￥{{billboards.price1}}</span>
                     <i>￥{{billboards.oldprice1}}</i> 
           </div> 
@@ -87,11 +86,14 @@
                 <div class="numa1">
                         <ul>
                               <li class="yo-ico" @click='decrement'>&#xe649;</li>
-                              <li>{{$store.state.num}}</li>
+                                 <li>{{$store.state.num}}</li>
                               <li class="yo-ico" @click='increment'>&#xe61f;</li>
                         </ul>
                         <nav @click='addGood({id:billboards.id,title:billboards.title,price1:billboards.price1,img:billboards.img,tariff:billboards.tariff,freight:billboards.freight})'>
+                        <span  @click.once="shoppingCar(),$store.state.isDis=!$store.state.isDis" > {{$store.state.isDis}}
+                              <!-- shoppingCar(), -->
                               加入购物车
+                             </span>
                         </nav>
                 </div>    
              </div>
@@ -103,33 +105,32 @@ import bus from '../../modules/bus'
 import axios from 'axios'
 export default {
   name:'app-autotrophy',
-data:function(){
-        return{
-             isShade:false,
-             isShow:false,
-             billboards:[]   
-        }
-  },
+      data:function(){
+            return{
+                    isShade:false,
+                    isShow:false,
+                    billboards:[]   
+                  }
+      },
   methods:{
-         ...mapActions(['addGood']),
-         ...mapMutations(['increment','decrement']),
-     getData(){
-         let that = this;
-         axios.get('/src/falseData/false.json',{}).then((response)=>{
-            console.log(response)
-              that.billboards = response.data.goodlists[0]
-              console.log(that.billboards.name)
-         })
-     }
-  },
- 
+            ...mapActions(['addGood']),
+            ...mapMutations(['increment','decrement' ,'shoppingCar']),
+      //    ,'shoppingCar'
+            getData(){
+                  let that = this;
+                  axios.get('/src/falseData/false.json',{}).then((response)=>{
+                        console.log(response)
+                        that.billboards = response.data.goodlists[0]
+                        console.log(that.billboards.name)
+                  })
+            }
+      },
   created(){
-       	 this.getData()
-       	 
+       	this.getData()  	 
   },
-mounted(){
-        console.log(this)
-       var onOff=false;
+  mounted(){
+      console.log(this)
+      var onOff=false;
       let  arr = document.getElementsByClassName('autotrophy')[0]
 	 document.getElementsByClassName('elasticity')[0].onclick = function(){
         if(onOff){     
@@ -144,8 +145,8 @@ mounted(){
 			}
 			onOff=!onOff
 
-       }
-       let that = this
+      }
+      let that = this
         	bus.$on("change-type",(params)=>{
                     params =that.billboards 
                     

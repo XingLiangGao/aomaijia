@@ -2,7 +2,7 @@
   <div class="app-shopbotm">
          <div class="acount">
              <i>
-                 <input type="checkbox"/>
+                 <input v-model="isAllSelected" type="checkbox"/>
              </i>
              <div class="add">
                   <p>
@@ -13,20 +13,38 @@
                   </p>
              </div>
              <nav>
-                  结算 (<span>1</span>) 
+                  结算 (<span>{{$store.state.car.length}}</span>) 
              </nav>
         </div>   
            
   </div>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import {mapGetters,mapActions} from 'vuex'
 export default {
    name:'app-shopbotm',
    props:['inf'],
    computed:{
-       ...mapGetters(['money','tarif','freights'])
-   }
+       ...mapGetters(['money','tarif','freights']),
+       isAllSelected:{
+                    get(){// 得到
+                        return this.$store.state.car.every(item=>{
+                    if(item.isSelected){
+                        return true
+                    }else{
+                        return false
+                    }
+                })
+            },    
+            set(newValue){
+                this.selectedGood(newValue)
+                console.log(newValue)
+            }
+       }
+    },
+   methods:{
+          ...mapActions(['selectedGood'])
+    }
 }
 </script>
 <style lang="scss" scoped>

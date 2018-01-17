@@ -1,5 +1,5 @@
 <template lang="html">
-	<div class="app-banner">
+	<div class="main app-banner">
 			<!--<a href="#">
 				<img src="http://img04.aomygod.com/16090a7729e_bc_80dd1ca7dff12c7065087e0acf997736_1242x613.jpeg?imageView/0/w/640/q/85" class="jImg img-error ">
 			</a>-->

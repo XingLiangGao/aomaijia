@@ -9,24 +9,22 @@
                         <span class="yo-ico">&#xe525;</span>
                     </div>
             </div> 
-           
-                
-           
-           
+            <AppMessage :type= "type"/>
+                       
+        <DetailsBottom/>   
       </div>
-</template>s
+</template>
 <script>
-
-
+import DetailsBottom from './detailsBottom/details-bottom'
+ import AppMessage from './bacicMessage/bacic-message'
 export default {
   name : "app-detailshead",
   data:function(){
-    
         return{
-            billboards:[]    
+              type:{value:1}    
         } 
   },
- 
+  components:{DetailsBottom,AppMessage}
   
   
  

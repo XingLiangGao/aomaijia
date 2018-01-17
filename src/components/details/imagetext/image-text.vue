@@ -1,7 +1,6 @@
 <template  >
       <div class="image-text">
-          <AppDetailshead/>
-        <AppMessage/>  
+        
         <div class="basic">
             <ul>
                 <li>基本信息</li>
@@ -25,8 +24,6 @@
 </template>
 <script>
 import axios from 'axios'
-import AppDetailshead from '../app-detailshead'
-import AppMessage from '../bacicMessage/bacic-message.vue'
 export default {
   name : "image-text",
   data:function(){
@@ -35,7 +32,6 @@ export default {
             images:[]
        }
   },
-  components:{AppMessage,AppDetailshead},
   methods:{
         getDate(){
             let that = this
