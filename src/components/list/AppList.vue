@@ -3,10 +3,12 @@
         <AppListSearch></AppListSearch>
         <AppNav :type="type"></AppNav>
         <AppListContent :type="type.value"></AppListContent>
+        <AppFooter></AppFooter>
     </div>
 </template>
 
 <script>
+import AppFooter from '../main/AppFooter'
 import AppListSearch from './AppListSearch';
 import AppListContent from './AppListConent';
 import AppNav from './AppListNav'
@@ -20,7 +22,7 @@ export default {
       }
   },
   components:{
-      AppListSearch,AppListContent,AppNav
+      AppListSearch,AppListContent,AppNav,AppFooter
   }
 }
 </script>

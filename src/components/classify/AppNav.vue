@@ -1,5 +1,5 @@
 <template>
-  <div class="app-nav">
+  <div class="app-nav-class">
       <nav>
           <ul>
               <li @click="showtype.value=true" :class="{backgrou:showtype.value}">分类</li>

@@ -1,7 +1,7 @@
 <template>
     <div class="app-list-search">
        <div>
-           <i class="yo-ico">&#xf07d;</i>
+           <router-link to="classify" class="yo-ico">&#xf07d;</router-link>
            <div>
                <i class="yo-ico">&#xf067;</i>
                <input type="text" placeholder="搜索">

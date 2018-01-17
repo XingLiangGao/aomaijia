@@ -42,21 +42,30 @@ export default {
           password:''
       }
   },
-  methods:{
-      login(){
-          let that = this
-          setTimeout(() => {
-              if(that.username != '123' || that.password != '456'){
-                  Toast("密码错误，登录失败")
-                  return false;
-              }
-              Toast("登录成功")
-              let data = {user_id:12345,username:that.username}
-              that.$store.commit('changeUserInFo',data)
-              that.$router.replace({name:'personal'})
-          },500)
-      }
-  }
+  methods:{  
+		login(){  
+			if(this.username==""||this.password==""){  
+				alert('请输入手机号和密码')  
+			}else{
+				this.getDate();
+			}
+		},
+		getDate(){
+			let that = this
+			var storage = window.localStorage.date;
+			var storageObj = JSON.parse(storage);
+			
+			// console.log(storageObj)
+			storageObj.forEach(item=>{
+				if(that.username == item.username && that.password == item.password){
+					this.$router.push('/mine/personal')
+                    Toast("登录成功")
+				}else{
+					Toast("登录失败")
+				}
+			})
+		}  
+    }
 }
 </script>
 

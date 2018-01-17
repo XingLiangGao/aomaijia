@@ -23,7 +23,7 @@
             </div>
         </div>
         <p>注册视为同意<span>奥买家注册协议</span></p>
-        <div class="ensure">注册</div>
+        <div class="ensure" @click="register">注册</div>
         <div class="pass">忘记密码</div>
     </div>
 </template>
@@ -31,7 +31,31 @@
 <script>
 import { Field } from 'mint-ui';
 export default {
-  name:'app-register'
+  name:'app-register',
+  data() {
+      return {
+          date:[],
+          username:'',
+          password:''
+      }
+  },
+  methods:{
+		register(){
+			if(this.username==''|| this.password==''){
+				alert('请填写完整信息')
+			}else{
+				this.$router.push('/mine')	
+				 this.updateStorage()	
+				 alert('注册成功')		
+			}
+		},
+		updateStorage(){
+			this.date.push({username:this.username,password:this.password})
+			// console.log(this.date)
+			localStorage.date=JSON.stringify(this.date)
+			
+		}
+    },
 }
 </script>
 

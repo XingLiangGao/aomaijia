@@ -10,7 +10,8 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "json-server": "json-server ./static/mock/mock.js -p 9000"
   },
   "dependencies": {
     "array-find": "^1.0.0",
