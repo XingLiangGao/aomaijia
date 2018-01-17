@@ -24,7 +24,7 @@
 	    methods:{
           getGoodsList () {
           	let that = this;
-            axios.get('/static/swiper.json').then((res) => {
+            axios.get('/static/json/swiper.json').then((res) => {
               console.log(res.data.items)
               that.items = res.data.items;
             })
