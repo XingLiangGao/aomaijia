@@ -19,7 +19,7 @@
             </div>
             <div>
                 <i class="yo-ico">&#xe621;</i>
-                <mt-field label="" v-model="username"></mt-field>
+                <mt-field label=""></mt-field>
             </div>
         </div>
         <p>注册视为同意<span>奥买家注册协议</span></p>
