@@ -18,7 +18,7 @@ export default {
       }
   },
   mounted() {
-      fetch('http://localhost:8080/api/list')
+      fetch('/api/list')
       .then((response) => response.json())
       .then((res) => {
         //   console.log(res)
