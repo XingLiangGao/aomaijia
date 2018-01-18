@@ -2,8 +2,8 @@
     <div class="app-personal">
         <div class="top">
             <div class="exit">
-                <router-link class="yo-ico" to="login">&#xf07d;</router-link>
-                <router-link class="yo-ico" to="/">&#xe62a;</router-link>
+                <router-link class="yo-ico" to="login" style="color:#fff">&#xf07d;</router-link>
+                <router-link class="yo-ico" to="/" style="color:#fff">&#xe62a;</router-link>
             </div>
             <div class="photo">
                 <img src="https://img04.aomygod.com/fontend/201769/imgs/user.png" alt="">
@@ -43,13 +43,13 @@ export default {
         this.date.push({username:this.username,password:this.password})
         localStorage.date=JSON.stringify(this.date)
         this.$router.push('/mine')
-    }  
+    }
   },
   mounted: function () {
         let that = this
         var storage = window.localStorage.date;
         var storageObj = JSON.parse(storage);
-        
+
         storageObj.forEach(item=>{
             that.name = item.username
         })

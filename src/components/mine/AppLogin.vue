@@ -9,13 +9,13 @@
         <form @submit.prevent = 'login'>
             <div class="login">
                 <div>
-                    <i class="yo-ico">&#xe63a;</i>
+                    <i class="yo-ico">&#xe680;</i>
                     <mt-field label="" v-model="username"></mt-field>
                 </div>
                 <div>
-                    <i class="yo-ico">&#xe610;</i>
+                    <i class="yo-ico">&#xe603;</i>
                     <mt-field label="" v-model="password"></mt-field>
-                    <i class="yo-ico eye">&#xe611;</i>
+                    <i class="yo-ico eye" style="font-size:28px">&#xe61d;</i>
                 </div>
             </div>
             <button class="submit" type="submit">登录</button>
@@ -42,10 +42,10 @@ export default {
           password:''
       }
   },
-  methods:{  
-		login(){  
-			if(this.username==""||this.password==""){  
-				alert('请输入手机号和密码')  
+  methods:{
+		login(){
+			if(this.username==""||this.password==""){
+				alert('请输入手机号和密码')
 			}else{
 				this.getDate();
 			}
@@ -54,7 +54,7 @@ export default {
 			let that = this
 			var storage = window.localStorage.date;
 			var storageObj = JSON.parse(storage);
-			
+
 			// console.log(storageObj)
 			storageObj.forEach(item=>{
 				if(that.username == item.username && that.password == item.password){
@@ -64,7 +64,7 @@ export default {
 					Toast("登录失败")
 				}
 			})
-		}  
+		}
     }
 }
 </script>

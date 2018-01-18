@@ -12,7 +12,9 @@
 				<ul class="swiper-wrapper">
 					<li class="swiper-slide">
 						<div class="list-img">
+						  <router-link to="detailshead" >
 							<img :src="detail.url1"/>
+						  </router-link>		
 						</div>
 						<div class="list-detail">
 							<h3>{{detail.good1}}</h3>

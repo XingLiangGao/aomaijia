@@ -1,23 +1,23 @@
 <template>
     <div class="details-bottom">
           <div class="details-bottom">
-			 
+
             	  <ul>
-            	  	   <li>
+            	  	   <router-link to="mine" tag="li">
             	  	   	<i class="yo-ico">&#xe926;</i>
             	  	   	我的
-            	  	   </li>
+            	  	   </router-link>
             	  	   <li>
             	  	     <i class="yo-ico">&#xe617;</i>
             	  	      收藏
             	  	   </li>
             	  	   <router-link to="appshopping" tag="li">
             	  	   	 <i class="yo-ico">&#xe501;</i>
-            	  	     	购物车 
-					     <span :class="{'zxc':$store.state.isDis}">{{$store.state.num}}</span>		   
+            	  	     	购物车
+					     <span :class="{'zxc':$store.state.isDis}">{{$store.state.num}}</span>
             	  	   </router-link>
             	  </ul>
-            	  
+
             </div>
     </div>
 </template>
@@ -42,5 +42,5 @@ export default {
  }
 </script>
 <style lang="scss" scoped>
-    
+
 </style>

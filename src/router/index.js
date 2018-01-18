@@ -35,13 +35,15 @@ export default new Router({
     {path: '/list',name: 'list',component: AppList},
     {path: '/filtrate',name: 'filtrate',component: AppListFiltrate},
     {path: '/mine',component: AppMine,children:[
-      {path:'',redirect:to => {
-        if(!localStorage.user_info){
+      {path:'/',redirect:to => {
+        var storage = window.localStorage.date;
+        var storageObj = JSON.parse(storage);
+        if(!storageObj[0].username){
           return {name:'login'}
         }else{
           return {name:'personal'}
         }
-      }},      
+      }},
       {path:'login',name:'login',component:AppLogin},
       {path:'personal',name:'personal',component:AppPersonal},
       {path:'register',name:'register',component:AppRegister},
@@ -52,7 +54,7 @@ export default new Router({
       name: 'AppMain',
       component: AppMain
     },
-     
+
     {path:'/AppSearch',
     name:'AppSearch',
     component:AppSearch

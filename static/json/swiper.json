@@ -1,0 +1,16 @@
+{
+"items":[
+				{	
+					"title": "轮播图1",
+				    "url": "/static/img1.png"
+				  }, 
+				  {
+				   "title": "轮播图2",
+				   "url": "/static/img2.png"
+				  },
+				  {
+				   "title": "轮播图3",
+				   "url": "/static/img3.png"
+				 }
+]}
+				  

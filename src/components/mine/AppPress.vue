@@ -6,7 +6,7 @@
         </div>
         <div class="login">
             <div>
-                <i class="yo-ico">&#xe63a;</i>
+                <i class="yo-ico">&#xe680;</i>
                 <mt-field label="" placeholder="手机号/邮箱/用户名"></mt-field>
             </div>
             <div>
