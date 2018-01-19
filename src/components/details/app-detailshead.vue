@@ -11,7 +11,7 @@
             </div> 
             <AppMessage :type= "type"/>
                        
-        <DetailsBottom/>   
+            <DetailsBottom/>   
       </div>
 </template>
 <script>
