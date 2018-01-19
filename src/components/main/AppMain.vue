@@ -36,5 +36,6 @@ import BackTop from './BackTop'
 	        flex-direction: column;
 	        overflow: scroll;
 	        width: 100%;
+            background: #F0EFED;
 		}
 </style>

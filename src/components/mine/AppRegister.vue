@@ -10,16 +10,17 @@
         <div class="login">
             <div>
                 <i class="yo-ico">&#xe680;</i>
-                <mt-field label="" v-model="username"></mt-field>
+                <mt-field placeholder="请输入11位手机号码" v-model="username"></mt-field>
             </div>
             <div class="two">
                 <i class="yo-ico">&#xe603;</i>
-                <mt-field label="" v-model="password"></mt-field>
+                <mt-field placeholder="请输入密码" v-model="password"></mt-field>
                 <i class="yo-ico eye" style="font-size:28px">&#xe61d;</i>
             </div>
             <div>
                 <i class="yo-ico">&#xe621;</i>
-                <mt-field label=""></mt-field>
+                <mt-field placeholder="6位验证码"></mt-field>
+                <span>获取验证码</span>
             </div>
         </div>
         <p>注册视为同意<span>奥买家注册协议</span></p>

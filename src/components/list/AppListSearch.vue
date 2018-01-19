@@ -4,7 +4,7 @@
            <router-link to="classify" class="yo-ico">&#xf07d;</router-link>
            <div>
                <i class="yo-ico">&#xf067;</i>
-               <input type="text" placeholder="搜索">
+               <router-link tag="input" to="AppSearch" type="text" placeholder="搜索"></router-link>
            </div>
            <i class="yo-ico">&#xe62a;</i>
        </div>

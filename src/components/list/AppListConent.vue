@@ -10,7 +10,6 @@
                         <p>￥{{list.price}} <span>￥{{list.oldprice}}</span></p>
                         <p><span>{{list.evaluatenum}}条评价</span></p>
                     </div>
-                    <i class="yo-ico">&#xe611;</i>
                 </div>
             </div>
         </div>
@@ -77,7 +76,7 @@ export default {
 .app-list-content{
     
     background: #fff;
-    
+    padding-bottom: 50px;
     >div{
         height: 147px;
         background-color: #fff;

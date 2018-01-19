@@ -39,6 +39,7 @@
 		.app-nav{
             height: 0.915rem;
 			width: 100%;
+			padding: 18px 0;
             ul{
                 width: 100%;
                 height: 100%;
