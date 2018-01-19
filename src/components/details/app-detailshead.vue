@@ -24,7 +24,11 @@ export default {
               type:{value:1}    
         } 
   },
-  components:{DetailsBottom,AppMessage}
+  components:{DetailsBottom,AppMessage},
+  created() {
+    console.log(this.$route.params.userId)
+    
+  }
   
   
  

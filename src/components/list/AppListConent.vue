@@ -1,7 +1,7 @@
 <template>
     <div class="app-list-content">
         
-        <div  v-for="list in orderPrice" :key="list.id">
+        <div @click="toDetails(list.id)" v-for="list in orderPrice" :key="list.id">
             <img :src="list.img" alt="">
             <div>
                 <h4>【<span>{{list.mold}}</span>】<strong>{{list.name}}</strong></h4>
@@ -58,6 +58,9 @@ export default {
         },
         getId(a,b){
           return a.id - b.id            
+        },
+        toDetails(date_id) {
+            this.$router.push({ name: 'detailshead', params: { userId: date_id }})
         }
     },
     mounted(){

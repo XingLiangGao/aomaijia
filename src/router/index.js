@@ -27,7 +27,7 @@ export default new Router({
   routes: [
     // {path:'',redirect:''},
     {path: '/classify',name: 'classify',component: Classify},
-    {path:'/detailshead',name:'detailshead',component:AppDetailshead},
+    {path:'/detailshead/:userId',name:'detailshead',component:AppDetailshead},
     {path:'/detail',name:'detail',component:AppDetails},
     {path:'/imagetext',name:'imagetext',component:ImageText},
     {path:'/appevaluate',name:'appevaluate',component:AppEvaluate},
