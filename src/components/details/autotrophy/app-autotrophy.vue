@@ -90,7 +90,7 @@
                               <li class="yo-ico" @click='increment'>&#xe61f;</li>
                         </ul>
                         <nav @click='addGood({id:billboards.id,title:billboards.title,price1:billboards.price1,img:billboards.img,tariff:billboards.tariff,freight:billboards.freight})'>
-                        <span  @click.once="shoppingCar(),$store.state.isDis=!$store.state.isDis" > {{$store.state.isDis}}
+                        <span  @click.once="shoppingCar(),$store.state.isDis=!$store.state.isDis" > 
                               <!-- shoppingCar(), -->
                               加入购物车
                              </span>

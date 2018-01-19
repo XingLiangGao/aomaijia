@@ -33,7 +33,7 @@
  			width: 100%;
  			.search-header{
  				height: .47rem;
- 				border-bottom: 1px solid #666;
+ 				border-bottom: 1px solid #ccc;
  				display:flex; 
  				div{
  					justify-content: center;

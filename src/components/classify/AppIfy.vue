@@ -25,6 +25,11 @@ export default {
           this.list = res.data.classifys
         //   console.log(this.list)
       })
+      let that = this
+      axios.get('./static/json/list.json').then((res) => {
+          // console.log(res)
+          that.lists = res.data
+      })
   }
 }
 </script>

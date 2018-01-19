@@ -37,12 +37,16 @@ export default new Router({
     {path: '/mine',component: AppMine,children:[
       {path:'/',redirect:to => {
         var storage = window.localStorage.date;
-        var storageObj = JSON.parse(storage);
-        if(!storageObj[0].username){
-          return {name:'login'}
+        if(storage){
+          var storageObj = JSON.parse(storage);
+          if(!storageObj[0].username){
+            return {name:'login'}
+          }else{
+            return {name:'personal'}
+          }
         }else{
-          return {name:'personal'}
-        }
+          return {name:'login'}
+        } 
       }},
       {path:'login',name:'login',component:AppLogin},
       {path:'personal',name:'personal',component:AppPersonal},

@@ -4,10 +4,10 @@
         <div  v-for="list in orderPrice" :key="list.id">
             <img :src="list.img" alt="">
             <div>
-                <h4>【<span>{{list.mold}}</span>】<strong>{{list.title}}</strong></h4>
+                <h4>【<span>{{list.mold}}</span>】<strong>{{list.name}}</strong></h4>
                 <div>
                     <div>
-                        <p>￥{{list.price}} <span>￥{{list.oldprice}}</span></p>
+                        <p>￥{{list.price1}} <span>￥{{list.oldprice1}}</span></p>
                         <p><span>{{list.evaluatenum}}条评价</span></p>
                     </div>
                 </div>
@@ -41,9 +41,9 @@ export default {
     methods:{
         getData() {
             let that = this
-            axios.get('./static/json/list.json').then((res) => {
-                // console.log(res)
-                that.lists = res.data
+            axios.get('/src/falseData/false.json').then((res) => {
+                //console.log(res,111)
+                that.lists = res.data.goodlists
             })
         },
         changeType() {
@@ -51,7 +51,7 @@ export default {
             this.getData()
         },
         priceNumber(a,b) {
-          return a.price - b.price
+          return a.price1 - b.price1
         },
         salesNumber(a,b) {
           return b.evaluatenum - a.evaluatenum
@@ -111,6 +111,7 @@ export default {
                     
                 }
                 p:first-child{
+                    font-size: 16px;
                     span{
                         text-decoration: line-through;
                     }

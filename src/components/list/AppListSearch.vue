@@ -3,10 +3,10 @@
        <div>
            <router-link to="classify" class="yo-ico">&#xf07d;</router-link>
            <div>
-               <i class="yo-ico">&#xf067;</i>
+               <i class="yo-ico" style="font-size:20px;color:#6A6A6A">&#xf067;</i>
                <router-link tag="input" to="AppSearch" type="text" placeholder="搜索"></router-link>
            </div>
-           <i class="yo-ico">&#xe62a;</i>
+           <router-link tag="i" to="/" style="font-size:20px;color:#6A6A6A" class="yo-ico">&#xe62a;</router-link>
        </div>
     </div>
 </template>

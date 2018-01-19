@@ -31,5 +31,6 @@ export default {
 .app-list{
     overflow:auto;
     height: 100vh;
+    margin-top: 0;
 }
 </style>
