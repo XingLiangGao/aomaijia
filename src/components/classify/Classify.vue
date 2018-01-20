@@ -19,7 +19,7 @@ import AppFooter from '../main/AppFooter'
         },
         data : function () {
             return {
-                showtype:{value:false}
+                showtype:{value:true}
             }
         }
     }

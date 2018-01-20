@@ -21,9 +21,7 @@ export default {
       fetch('/api/list')
       .then((response) => response.json())
       .then((res) => {
-        //   console.log(res)
           this.list = res.data.citysbrand
-        //   console.log(this.list)
       })
   }
 }

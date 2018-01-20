@@ -14,8 +14,9 @@
                 </div>
                 <div>
                     <i class="yo-ico">&#xe603;</i>
-                    <mt-field placeholder="请输入密码" v-model="password"></mt-field>
-                    <i class="yo-ico eye" style="font-size:28px">&#xe61d;</i>
+                    <mt-field id="pass_word" :type="inputType" placeholder="请输入密码" v-model="password"></mt-field>
+                    <i v-if="iseye" class="yo-ico eye" @click="eye(), iseye=!iseye" style="font-size:28px">&#xe61d;</i>
+                    <i v-else class="yo-ico eye" @click="eye(), iseye=!iseye" style="font-size:28px">&#xe624;</i>
                 </div>
             </div>
             <button class="submit" @click="login" type="submit">登录</button>
@@ -32,20 +33,21 @@
 </template>
 
 <script>
-import { Field } from 'mint-ui';
-import {Toast} from 'mint-ui';
+import {Field, Toast} from 'mint-ui';
 export default {
   name:'app-login',
   data(){
       return {
           username:'',
-          password:''
+          password:'',
+          iseye: true,
+          inputType:"password"
       }
   },
   methods:{
 		login(){
 			if(this.username==""||this.password==""){
-				alert('请输入手机号和密码')
+				Toast('请输入手机号和密码')
 			}else{
 				this.getDate();
 			}
@@ -54,8 +56,8 @@ export default {
 			let that = this
 			var storage = window.localStorage.date;
             if(storage){
-              var storageObj = JSON.parse(storage);
-                    storageObj.forEach(item=>{
+                var storageObj = JSON.parse(storage);
+                storageObj.forEach(item=>{
                     if(that.username == item.username && that.password == item.password){
                         this.$router.push('/mine/personal')
                         Toast("登录成功")
@@ -66,7 +68,14 @@ export default {
             }else{
                 Toast("登录失败")
             } 
-		}
+		},
+        eye() {
+           if(this.inputType=="password"){
+                   this.inputType="text" 
+           }else{
+           this.inputType="password"
+           }
+        }
     }
 }
 </script>

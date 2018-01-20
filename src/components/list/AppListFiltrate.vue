@@ -3,14 +3,20 @@
         <div class="top">
             <router-link to="list" class="yo-ico">&#xf07d;</router-link>
             <div>
-                <span>清除筛选</span>
-                <span>确定</span>
+                <span @click="isShow=false">清除筛选</span>
+                <router-link to="list" tag="span">确定</router-link>
             </div>
         </div>
         <ul>
             <li><span>只显示有货</span><strong @click="isShow=!isShow" :class="{active : isShow == true}"></strong></li>
-            <li><span>品牌</span><i class="yo-ico">&#xf2ae;</i></li>
-            <li><span>价格</span><i class="yo-ico">&#xf2ae;</i></li>
+            <li @click="ispp=!ispp"><span>品牌</span><i class="yo-ico">&#xf2ae;</i></li>
+            <li class="content"><span>Adidas/阿迪达斯</span></li>
+            <li class="content"><span>Amoie Stagione/恋爱季</span></li>
+            <li class="content"><span>Gramont des moulins/佳梦磨坊</span></li>
+            <li @click="isjj=!isjj""><span>价格</span><i class="yo-ico">&#xf2ae;</i></li>
+            <li class="content"><span>0-3000</span></li>
+            <li class="content"><span>3000-6000</span></li>
+            <li class="content"><span>6000-12000</span></li>
         </ul>
     </div>
 </template>
@@ -20,7 +26,9 @@ export default {
   name:'app-list-filtrate',
   data() {
       return {
-          isShow:false
+          isShow:false,
+          ispp:false,
+          isjj:false
       }
   }
 }
@@ -80,6 +88,11 @@ export default {
                 background: #DFDFDF;
                 border-radius: 50%;
             }
+        }
+        .content{
+            background: #fff;
+            font-size: 14px;
+            color: #666;
         }
     }
 }
