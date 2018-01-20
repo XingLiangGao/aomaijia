@@ -4,54 +4,54 @@
     "data": {
         "citysbrand": [
             {"id":1,"title":"中国品牌","nav":[
-                {"id":1,"content":"玩哈哈"},
-                {"id":2,"content":"玩哈哈"},
-                {"id":3,"content":"玩哈哈"},
-                {"id":4,"content":"玩哈哈"}
+                {"id":1,"content":"欧碧泉"},
+                {"id":2,"content":"海蓝之谜"},
+                {"id":3,"content":"苹果"},
+                {"id":4,"content":"哇哈哈"}
             ]},
-            {"id":2,"title":"标题2","nav":[
-                {"id":1,"content":"玩哈哈"},
-                {"id":2,"content":"玩哈哈"},
-                {"id":3,"content":"玩哈哈"},
-                {"id":4,"content":"玩哈哈"}
+            {"id":2,"title":"法国品牌","nav":[
+                {"id":1,"content":"雷朋"},
+                {"id":2,"content":"康之选"},
+                {"id":3,"content":"维密"},
+                {"id":4,"content":"双宝"}
             ]},
-            {"id":3,"title":"标题3","nav":[
-                {"id":1,"content":"玩哈哈"},
-                {"id":2,"content":"玩哈哈"},
-                {"id":3,"content":"玩哈哈"},
-                {"id":4,"content":"玩哈哈"}
+            {"id":3,"title":"美国品牌","nav":[
+                {"id":1,"content":"QWE"},
+                {"id":2,"content":"RTY"},
+                {"id":3,"content":"ASD"},
+                {"id":4,"content":"FGH"}
             ]},
-            {"id":4,"title":"标题4","nav":[
-                {"id":1,"content":"玩哈哈"},
-                {"id":2,"content":"玩哈哈"},
-                {"id":3,"content":"玩哈哈"},
-                {"id":4,"content":"玩哈哈"}
+            {"id":4,"title":"韩国品牌","nav":[
+                {"id":1,"content":"YUI"},
+                {"id":2,"content":"HJK"},
+                {"id":3,"content":"BNM"},
+                {"id":4,"content":"OPO"}
             ]}
         ],
         "classifys": [
             {"id":1,"title":"人气推荐","nav":[
                 {"id":1,"content":"新品尝鲜"},
-                {"id":2,"content":"新品尝鲜"},
-                {"id":3,"content":"新品尝鲜"},
-                {"id":4,"content":"新品尝鲜"}
+                {"id":2,"content":"护肤TOP"},
+                {"id":3,"content":"食品TOP"},
+                {"id":4,"content":"服饰鞋包"}
             ]},
-            {"id":2,"title":"标题2","nav":[
-                {"id":1,"content":"玩哈哈"},
-                {"id":2,"content":"玩哈哈"},
-                {"id":3,"content":"玩哈哈"},
-                {"id":4,"content":"玩哈哈"}
+            {"id":2,"title":"护肤彩妆","nav":[
+                {"id":1,"content":"防嗮"},
+                {"id":2,"content":"精华"},
+                {"id":3,"content":"美甲"},
+                {"id":4,"content":"眼妆"}
             ]},
-            {"id":3,"title":"标题3","nav":[
-                {"id":1,"content":"玩哈哈"},
-                {"id":2,"content":"玩哈哈"},
-                {"id":3,"content":"玩哈哈"},
-                {"id":4,"content":"玩哈哈"}
+            {"id":3,"title":"个人护理","nav":[
+                {"id":1,"content":"洗发水"},
+                {"id":2,"content":"香皂"},
+                {"id":3,"content":"女性护理"},
+                {"id":4,"content":"牙刷"}
             ]},
-            {"id":4,"title":"标题4","nav":[
-                {"id":1,"content":"玩哈哈"},
-                {"id":2,"content":"玩哈哈"},
-                {"id":3,"content":"玩哈哈"},
-                {"id":4,"content":"玩哈哈"}
+            {"id":4,"title":"母婴用品","nav":[
+                {"id":1,"content":"奶粉"},
+                {"id":2,"content":"纸尿裤"},
+                {"id":3,"content":"玩具"},
+                {"id":4,"content":"口腔护理"}
             ]}
         ]
     }

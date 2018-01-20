@@ -116,5 +116,19 @@
 </script>
 
 <style lang="scss" scoped>
-		
+.app-list{
+	background: #F0EFED;
+	margin-top: 0;
+	.good-list{
+		padding-top: 10px;
+		.list-header{
+			padding-top: 0;
+			height: .36rem;
+			h1{
+				line-height: 40px;
+			}
+		}
+	}
+	
+}
 </style>

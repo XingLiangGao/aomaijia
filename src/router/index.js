@@ -27,7 +27,7 @@ export default new Router({
   routes: [
     // {path:'',redirect:''},
     {path: '/classify',name: 'classify',component: Classify},
-    {path:'/detailshead',name:'detailshead',component:AppDetailshead},
+    {path:'/detailshead/:userId',name:'detailshead',component:AppDetailshead},
     {path:'/detail',name:'detail',component:AppDetails},
     {path:'/imagetext',name:'imagetext',component:ImageText},
     {path:'/appevaluate',name:'appevaluate',component:AppEvaluate},
@@ -37,12 +37,16 @@ export default new Router({
     {path: '/mine',component: AppMine,children:[
       {path:'/',redirect:to => {
         var storage = window.localStorage.date;
-        var storageObj = JSON.parse(storage);
-        if(!storageObj[0].username){
-          return {name:'login'}
+        if(storage){
+          var storageObj = JSON.parse(storage);
+          if(!storageObj[0].username){
+            return {name:'login'}
+          }else{
+            return {name:'personal'}
+          }
         }else{
-          return {name:'personal'}
-        }
+          return {name:'login'}
+        } 
       }},
       {path:'login',name:'login',component:AppLogin},
       {path:'personal',name:'personal',component:AppPersonal},
@@ -64,5 +68,12 @@ export default new Router({
     	name:'AppPosition',
     	component:AppPosition
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })

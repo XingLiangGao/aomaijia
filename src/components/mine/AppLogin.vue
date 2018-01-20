@@ -10,11 +10,11 @@
             <div class="login">
                 <div>
                     <i class="yo-ico">&#xe680;</i>
-                    <mt-field label="" v-model="username"></mt-field>
+                    <mt-field placeholder="手机号/邮箱/用户名" v-model="username"></mt-field>
                 </div>
                 <div>
                     <i class="yo-ico">&#xe603;</i>
-                    <mt-field label="" v-model="password"></mt-field>
+                    <mt-field placeholder="请输入用户名" v-model="password"></mt-field>
                     <i class="yo-ico eye" style="font-size:28px">&#xe61d;</i>
                 </div>
             </div>

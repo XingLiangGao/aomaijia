@@ -3,6 +3,7 @@
          <div class="acount">
              <i>
                  <input v-model="isAllSelected" type="checkbox"/>
+                 全选
              </i>
              <div class="add">
                   <p>

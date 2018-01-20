@@ -11,8 +11,9 @@
                       <p>{{info.title}}</p>
                       <nav>
                             <span>￥{{info.price1}}</span>
+                            <span  @click='removeGood(info.id)'>删除</span>
                             <ul>
-                                <li class="yo-ico" @click='decrement'>-</li>
+                                <li class="yo-ico" @click='decrement(info.id)'>-</li>
                                 <li>{{$store.state.num}}</li>
                                 <li class="yo-ico" @click='increment'>+</li>  
                             </ul>
@@ -30,10 +31,10 @@ export default {
    props:['info'],
    methods:{
         ...mapActions(['addGood']),
-         ...mapMutations(['decrement','increment','shoppingCar']),  
+         ...mapMutations(['decrement','increment','shoppingCar','removeGood']),  
      },    
    computed:{   
-        ...mapGetters(['decrements'])
+      
    },
    mounted:{
       

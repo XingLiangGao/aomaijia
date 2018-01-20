@@ -37,5 +37,9 @@
 </script>
 
 <style lang="scss" scoped>
-		
+.app-header{
+	div:nth-child(2) a{
+	font-size: 24px;
+	}
+}
 </style>

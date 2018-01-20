@@ -1,16 +1,15 @@
 <template>
     <div class="app-list-content">
         
-        <div  v-for="list in orderPrice" :key="list.id">
+        <div @click="toDetails(list.id)" v-for="list in orderPrice" :key="list.id">
             <img :src="list.img" alt="">
             <div>
-                <h4>【<span>{{list.mold}}</span>】<strong>{{list.title}}</strong></h4>
+                <h4>【<span>{{list.mold}}</span>】<strong>{{list.name}}</strong></h4>
                 <div>
                     <div>
-                        <p>￥{{list.price}} <span>￥{{list.oldprice}}</span></p>
+                        <p>￥{{list.price1}} <span>￥{{list.oldprice1}}</span></p>
                         <p><span>{{list.evaluatenum}}条评价</span></p>
                     </div>
-                    <i class="yo-ico">&#xe611;</i>
                 </div>
             </div>
         </div>
@@ -42,9 +41,9 @@ export default {
     methods:{
         getData() {
             let that = this
-            axios.get('./static/json/list.json').then((res) => {
-                // console.log(res)
-                that.lists = res.data
+            axios.get('/src/falseData/false.json').then((res) => {
+                //console.log(res,111)
+                that.lists = res.data.goodlists
             })
         },
         changeType() {
@@ -52,13 +51,16 @@ export default {
             this.getData()
         },
         priceNumber(a,b) {
-          return a.price - b.price
+          return a.price1 - b.price1
         },
         salesNumber(a,b) {
           return b.evaluatenum - a.evaluatenum
         },
         getId(a,b){
           return a.id - b.id            
+        },
+        toDetails(date_id) {
+            this.$router.push({ name: 'detailshead', params: { userId: date_id }})
         }
     },
     mounted(){
@@ -77,7 +79,7 @@ export default {
 .app-list-content{
     
     background: #fff;
-    
+    padding-bottom: 50px;
     >div{
         height: 147px;
         background-color: #fff;
@@ -112,6 +114,7 @@ export default {
                     
                 }
                 p:first-child{
+                    font-size: 16px;
                     span{
                         text-decoration: line-through;
                     }

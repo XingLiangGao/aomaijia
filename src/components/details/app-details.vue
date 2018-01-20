@@ -3,7 +3,7 @@
             <!--轮播图-->
             <app-banner></app-banner>
             <!--商品地址-->
-            <app-autotrophy ></app-autotrophy>
+            <app-autotrophy :es="el"></app-autotrophy>
             <!--国家-->
             
             <!--旗舰店-->
@@ -28,7 +28,8 @@ import AppGlobal from './appglobal/app-global'
 import AppSee from './appSee/app-see'
 import axios from 'axios'
 export default {
-   name : "app-details",
+     name : "app-details",
+           props:['el'],
      data:function(){
             return{
             isShade:false, 

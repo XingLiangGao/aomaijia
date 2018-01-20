@@ -4,9 +4,9 @@
 			<!--<div class="search-delete">
 				<i class="yo-ico">&#xe532;</i>
 			</div>		-->
-			<router-link to="/" tag="div" class="search-delete">
+			<div @click="$router.back(-1)" class="search-delete">
 				<i class="yo-ico">&#xe532;</i>
-			</router-link>
+			</div>
 			<div class="search">
 				<div class="">
 			        <i class="yo-ico">&#xf067;</i>
@@ -33,7 +33,7 @@
  			width: 100%;
  			.search-header{
  				height: .47rem;
- 				border-bottom: 1px solid #666;
+ 				border-bottom: 1px solid #ccc;
  				display:flex; 
  				div{
  					justify-content: center;

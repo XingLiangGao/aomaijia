@@ -42,26 +42,13 @@ const getters = {
           });
            return freight
       },
-      decrements(state,{id}){//数量减
-        let len = state.car;
-        for(let i = 0; i<len.length;i++){
-            if(state.car[i]==id){
-              state.car[i].num--
-              console.log( state.car[i].num--)
-              if(state.car[i].unm == 0){
-                state.car.splice(i,i)
-              }
-            }
-        }
-        localStorage.car = JSON.stringify(state.car)
-      } 
   
 }
 const mutations = {
-     initCar(state,car){//初始化数据
-        state.car = car;
-     },
-     addGood(state,{id,title,price1,img,tariff,freight}){//获取到parms 数据 
+      initCar(state,car){//初始化数据
+          state.car = car;
+      },
+      addGood(state,{id,title,price1,img,tariff,freight}){//获取到parms 数据 
       let isHas = state.car.some(item=>{//判断数据是否存在,因为用的some方法所以只要有一个为true就返回true 还有every方法 全部为true才返回
             if(item.id == id){
               return true;
@@ -74,16 +61,26 @@ const mutations = {
         state.car.push({id,title,price1,tariff,freight,img,num:1,isSelected:true})
       }
       //为了与数据库数据做对应 （这样影响mutation） 如果是真实ajax 请求不用写 ，
-     localStorage.car = JSON.stringify(state.car)
-     },
-     increment(state){//数量加
-      state.num++
-     },
-     decrement(state){//数量减
-            state.num--   
-        if(state.num<=1){
-          state.num = 1
-          } 
+      localStorage.car = JSON.stringify(state.car)
+      },
+      increment(state){//数量加
+        state.num++
+      },
+      decrement(state,{id}){//数量减
+          state.num--   
+          if(state.num<=0){
+            state.num = 1
+            } 
+      },
+      removeGood(state,id){
+        let len = state.car.length
+        for (let i = 0; i < len; i++) {
+            if(state.car[i].id==id){
+               state.car.splice(i,1)
+                break;
+            }
+        }
+        localStorage.car = JSON.stringify(state.car)
       },
       shoppingCar(state){//购物车加
         state.anount++
@@ -91,11 +88,11 @@ const mutations = {
       },
       selectedGood(state,val){
         state.car.forEach(item=>item.isSelected = val)  // 遍历要改的值val 让isSelected = val 为true 或false
-    },
-    getPosition(state,city){
-    	
-    	state.city = city
-    }
+      },
+      getPosition(state,city){
+        
+        state.city = city
+      }
   }
 const actions = {
    addGood({commit},parms){

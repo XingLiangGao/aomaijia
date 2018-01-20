@@ -11,7 +11,7 @@
             	  	     <i class="yo-ico">&#xe617;</i>
             	  	      收藏
             	  	   </li>
-            	  	   <router-link to="appshopping" tag="li">
+            	  	   <router-link to="/appshopping" tag="li">
             	  	   	 <i class="yo-ico">&#xe501;</i>
             	  	     	购物车
 					     <span :class="{'zxc':$store.state.isDis}">{{$store.state.num}}</span>
