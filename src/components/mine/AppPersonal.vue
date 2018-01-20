@@ -18,7 +18,7 @@
         <div class="bottom">
             <ul>
                 <li><i class="yo-ico tt">&#xe60f;</i><span>全部订单</span></li>
-                <li><i class="yo-ico tt">&#xe67d;</i><span>我的收藏</span></li>
+                <router-link tag="li" to="collect"><i class="yo-ico tt">&#xe67d;</i><span>我的收藏</span></router-link>
                 <li><i class="yo-ico tt">&#xe616;</i><span>商品评价</span></li>
                 <li><i class="yo-ico">&#xe660;</i><span>收货地址</span></li>
                 <li><i class="yo-ico">&#xe7a9;</i><span>身份证信息</span></li>

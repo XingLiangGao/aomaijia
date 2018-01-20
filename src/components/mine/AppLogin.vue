@@ -14,11 +14,11 @@
                 </div>
                 <div>
                     <i class="yo-ico">&#xe603;</i>
-                    <mt-field placeholder="请输入用户名" v-model="password"></mt-field>
+                    <mt-field placeholder="请输入密码" v-model="password"></mt-field>
                     <i class="yo-ico eye" style="font-size:28px">&#xe61d;</i>
                 </div>
             </div>
-            <button class="submit" type="submit">登录</button>
+            <button class="submit" @click="login" type="submit">登录</button>
             <div class="forgetpassword">
                 <router-link class="p1" to="register">注册</router-link>
                 <router-link class="p2" to="press">忘记密码</router-link>

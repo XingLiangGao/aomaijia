@@ -1,30 +1,30 @@
 <template lang="html">
 	<div class="app-nav">
 		<ul>
-				<li>
+				<router-link to="/AppInvition" tag="li">
 						<div class="i-tools">
-							<img src="http://img04.aomygod.com/15d2bbf8bdf_bc_772ecb2c4ab0693ce8aed8e2c2de5dd5_126x126.png?imageslim" alt="">
+							<img src="http://img04.aomygod.com/160f788c701_bc_735f85822c01e5ac246557202cc6dbaa_126x126.png?imageslim" alt="">
 						</div>
 						<span>邀请有礼</span>
-				</li>
-				<li>
+				</router-link>
+				<router-link to="/AppInvition" tag="li">
 						<div class="i-tools">
-							<img src="http://img04.aomygod.com/15d2bbf8bdf_bc_772ecb2c4ab0693ce8aed8e2c2de5dd5_126x126.png?imageslim" alt="">
+							<img src="http://img04.aomygod.com/160f78929d0_bc_9888646aa90d0a223eeca555bebf1685_126x126.png?imageslim" alt="">
 						</div>
-						<span>邀请有礼</span>
-				</li>
-				<li>
+						<span>每日秒杀</span>
+				</router-link>
+				<router-link to="/AppInvition" tag="li">
 						<div class="i-tools">
-							<img src="http://img04.aomygod.com/15d2bbf8bdf_bc_772ecb2c4ab0693ce8aed8e2c2de5dd5_126x126.png?imageslim" alt="">
+							<img src="http://img04.aomygod.com/160f789b79e_bc_9ed7283466e4b16dc7f8c42323d03078_126x126.png?imageslim" alt="">
 						</div>
-						<span>邀请有礼</span>
-				</li>
-				<li>
+						<span>抢50元卷</span>
+				</router-link>
+				<router-link to="/AppInvition" tag="li">
 						<div class="i-tools">
-							<img src="http://img04.aomygod.com/15d2bbf8bdf_bc_772ecb2c4ab0693ce8aed8e2c2de5dd5_126x126.png?imageslim" alt="">
+							<img src="http://img04.aomygod.com/160f789efd6_bc_21f81f8ef02514dfbb363fb3060d56cd_126x126.png?imageslim" alt="">
 						</div>
-						<span>邀请有礼</span>
-				</li>
+						<span>捡漏专区</span>
+				</router-link>
 			</ul>
 	</div>
 </template>
@@ -36,36 +36,5 @@
 </script>
 
 <style lang="scss" scoped>
-		.app-nav{
-            height: 0.915rem;
-			width: 100%;
-			padding: 18px 0;
-            ul{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                li{
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-                        .i-tools{
-                            height: .4rem;
-                            width: .4rem;
-                            img{
-                              width: 100%;
-                              height: 100%;
-                            }
-                        }
-                        span{
-                            display: block;
-                            height: 0.26rem;
-                            line-height: 0.26rem;
-                            font-size: .14rem;
-                            color: #222;
-                        }
-                }
-            }
-        }
+		
 </style>

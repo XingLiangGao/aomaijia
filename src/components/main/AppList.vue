@@ -12,9 +12,7 @@
 				<ul class="swiper-wrapper">
 					<li class="swiper-slide">
 						<div class="list-img">
-						  <router-link to="detailshead" >
 							<img :src="detail.url1"/>
-						  </router-link>		
 						</div>
 						<div class="list-detail">
 							<h3>{{detail.good1}}</h3>
@@ -116,19 +114,5 @@
 </script>
 
 <style lang="scss" scoped>
-.app-list{
-	background: #F0EFED;
-	margin-top: 0;
-	.good-list{
-		padding-top: 10px;
-		.list-header{
-			padding-top: 0;
-			height: .36rem;
-			h1{
-				line-height: 40px;
-			}
-		}
-	}
-	
-}
+		
 </style>

@@ -2,29 +2,29 @@
    <div class="app-autotrophy" >
          
            <div class="price"> 
-                    <span> ￥{{billboards.price1}}</span>
-                    <i>￥{{billboards.oldprice1}}</i> 
+                    <span> ￥{{es.price1}}</span>
+                    <i>￥{{es.oldprice1}}</i> 
           </div> 
           <div class="autotrophy">
                   <nav>
                       <ul>
                        <li>
                              <span>自营/</span> 
-                             {{billboards.title}}
+                             {{es.title}}
                        </li>
                        </ul>
                   </nav>
                   <div class="elasticity">
                         <p class="xp">
-                            {{billboards.introduce}}
+                            {{es.introduce}}
                         </p>
-                        <i class="yo-ico" v-trans-ition>&#xe625;</i>
+                        <!-- <i class="yo-ico" v-trans-ition>&#xe625;</i> -->
                   </div>
                  
             </div>
               <!--运费说明-->
             <div class="freight">
-                  <p>运费说明：<span> {{billboards.PostTerms}}</span></p>
+                  <p>运费说明：<span> {{es.PostTerms}}</span></p>
             </div>
              <!--七天退货-->
             <div class="keep-up">
@@ -56,13 +56,13 @@
              </div>
              <!---->
               <div id="state">
-                  <nav class="state1">{{billboards.state}}</nav>
+                  <nav class="state1">{{es.state}}</nav>
                  
             </div>
             <div class="guang">
 	             <ul>
-	                        <li>{{billboards.site}}</li>
-	                        <li>关税：<span>￥{{billboards.tariff}}</span></li>
+	                        <li>{{es.site}}</li>
+	                        <li>关税：<span>￥{{es.tariff}}</span></li>
 	                        <li class="yo-ico x" v-trans-ition  @click="isShow=!isShow">&#xe615;</li>
 	            </ul>
             </div>
@@ -89,9 +89,8 @@
                                  <li>{{$store.state.num}}</li>
                               <li class="yo-ico" @click='increment'>&#xe61f;</li>
                         </ul>
-                        <nav @click='addGood({id:billboards.id,title:billboards.title,price1:billboards.price1,img:billboards.img,tariff:billboards.tariff,freight:billboards.freight})'>
+                        <nav @click='addGood({id:es.id,title:es.title,price1:es.price1,img:es.img,tariff:es.tariff,freight:es.freight})'>
                         <span  @click.once="shoppingCar(),$store.state.isDis=!$store.state.isDis" > 
-                              <!-- shoppingCar(), -->
                               加入购物车
                              </span>
                         </nav>
@@ -105,6 +104,7 @@ import bus from '../../modules/bus'
 import axios from 'axios'
 export default {
   name:'app-autotrophy',
+           props:['es'],
       data:function(){
             return{
                     isShade:false,
@@ -112,7 +112,7 @@ export default {
                     billboards:[]   
                   }
       },
-  methods:{
+      methods:{
             ...mapActions(['addGood']),
             ...mapMutations(['increment','decrement' ,'shoppingCar']),
       //    ,'shoppingCar'
@@ -125,33 +125,33 @@ export default {
                   })
             }
       },
-  created(){
-       	this.getData()  	 
-  },
-  mounted(){
-      console.log(this)
-      var onOff=false;
-      let  arr = document.getElementsByClassName('autotrophy')[0]
-	 document.getElementsByClassName('elasticity')[0].onclick = function(){
-        if(onOff){     
-                         this.style.height="0.66rem";
-                          this.style.overflow="hidden";
-                        //  console.log(this)
-			}else{
-                         this.style.height="1.4rem"
-                         arr.style.height = '1.4rem'
-                         this.style.overflow="hidden";
-                         
-			}
-			onOff=!onOff
+      created(){
+                  this.getData()  	 
+      },
+      mounted(){
+            console.log(this)
+            var onOff=false;
+            let  arr = document.getElementsByClassName('autotrophy')[0]
+            document.getElementsByClassName('elasticity')[0].onclick = function(){
+            if(onOff){     
+                              this.style.height="0.66rem";
+                              this.style.overflow="hidden";
+                              //  console.log(this)
+                        }else{
+                              this.style.height="1.4rem"
+                              arr.style.height = '1.4rem'
+                              this.style.overflow="hidden";
+                              
+                        }
+                        onOff=!onOff
 
-      }
-      let that = this
+            }
+            let that = this
         	bus.$on("change-type",(params)=>{
                     params =that.billboards 
                     
         	})
-  },
+      },
   
 }
 </script>
