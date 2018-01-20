@@ -56,7 +56,7 @@ export default {
                   console.log(that.eleIDs,111)
                   }
             }); 
-      },0)
+      },1000)
   }
   
   

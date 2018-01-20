@@ -91,7 +91,7 @@
                         </ul>
                         <nav @click='addGood({id:es.id,title:es.title,price1:es.price1,img:es.img,tariff:es.tariff,freight:es.freight})'>
                         <span  @click.once="shoppingCar(),$store.state.isDis=!$store.state.isDis" > 
-                              加入购物车
+                              加入购物车{{$store.state.isDis}}
                              </span>
                         </nav>
                 </div>    
@@ -121,7 +121,7 @@ export default {
                   axios.get('/src/falseData/false.json',{}).then((response)=>{
                         console.log(response)
                         that.billboards = response.data.goodlists[0]
-                        console.log(that.billboards.name)
+                        // console.log(that.billboards.name)
                   })
             }
       },
@@ -129,7 +129,7 @@ export default {
                   this.getData()  	 
       },
       mounted(){
-            console.log(this)
+            // console.log(this)
             var onOff=false;
             let  arr = document.getElementsByClassName('autotrophy')[0]
             document.getElementsByClassName('elasticity')[0].onclick = function(){
