@@ -6,6 +6,7 @@ import AppMine from '../components/mine/AppMine.vue'
 import AppPersonal from '../components/mine/AppPersonal.vue'
 import AppRegister from '../components/mine/AppRegister.vue'
 import AppPress from '../components/mine/AppPress.vue'
+import AppCollect from '../components/mine/AppCollect.vue'
 
 import AppList from '../components/list/AppList.vue'
 import AppListFiltrate from '../components/list/AppListFiltrate.vue'
@@ -19,6 +20,7 @@ import AppMain from '@/components/main/AppMain'
 
 import AppSearch from '@/components/main/AppSearch'
 import AppPosition from '@/components/main/AppPosition'
+import AppInvition from '@/components/main/AppInvition'
 
 
 Vue.use(Router)
@@ -50,6 +52,7 @@ export default new Router({
       }},
       {path:'login',name:'login',component:AppLogin},
       {path:'personal',name:'personal',component:AppPersonal},
+      {path: 'collect', name: 'collect', component: AppCollect},
       {path:'register',name:'register',component:AppRegister},
       {path:'press',name:'press',component:AppPress}
     ]},
@@ -67,6 +70,11 @@ export default new Router({
     	path:'/AppPosition',
     	name:'AppPosition',
     	component:AppPosition
+    },
+    {
+      path:'/AppInvition',
+      name:'AppInvition',
+      component:AppInvition
     }
   ],
   scrollBehavior (to, from, savedPosition) {

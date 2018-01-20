@@ -1,7 +1,7 @@
 <template>
    <div  class="app-details">      
             <!--轮播图-->
-            <app-banner></app-banner>
+            <app-banner :banners="el"></app-banner>
             <!--商品地址-->
             <app-autotrophy :es="el"></app-autotrophy>
             <!--国家-->
@@ -9,7 +9,7 @@
             <!--旗舰店-->
             <app-global></app-global>
             <!--看了又看-->
-            <app-see></app-see>
+            <app-see :see="el"></app-see>
             <!--查看商品详情-->
 	              <div id="check">
 	              	<i></i>

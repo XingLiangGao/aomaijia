@@ -4,7 +4,7 @@
         <div @click="toDetails(list.id)" v-for="list in orderPrice" :key="list.id">
             <img :src="list.img" alt="">
             <div>
-                <h4>【<span>{{list.mold}}</span>】<strong>{{list.name}}</strong></h4>
+                <h4>【<span>{{list.mold}}</span>】<strong>{{list.title}}</strong></h4>
                 <div>
                     <div>
                         <p>￥{{list.price1}} <span>￥{{list.oldprice1}}</span></p>

@@ -6,7 +6,7 @@
                     <div class="details-right">
                         <span class="yo-ico">&#xe696;</span>
                         
-                        <span class="yo-ico">&#xe525;</span>
+                        <router-link to="/" tag="span" class="yo-ico">&#xe525;</router-link>
                     </div>
             </div> 
             <AppMessage :type= "type" :ele="eleIDs"/>
@@ -53,7 +53,7 @@ export default {
                   console.log(ele_id) 
                   if(ele_id == id){
                   that.eleIDs = ele 
-                  console.log(that.eleIDs,111)
+                 
                   }
             }); 
       },1000)

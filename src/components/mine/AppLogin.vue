@@ -14,11 +14,11 @@
                 </div>
                 <div>
                     <i class="yo-ico">&#xe603;</i>
-                    <mt-field placeholder="请输入用户名" v-model="password"></mt-field>
+                    <mt-field placeholder="请输入密码" v-model="password"></mt-field>
                     <i class="yo-ico eye" style="font-size:28px">&#xe61d;</i>
                 </div>
             </div>
-            <button class="submit" type="submit">登录</button>
+            <button class="submit" @click="login" type="submit">登录</button>
             <div class="forgetpassword">
                 <router-link class="p1" to="register">注册</router-link>
                 <router-link class="p2" to="press">忘记密码</router-link>
@@ -53,17 +53,19 @@ export default {
 		getDate(){
 			let that = this
 			var storage = window.localStorage.date;
-			var storageObj = JSON.parse(storage);
-
-			// console.log(storageObj)
-			storageObj.forEach(item=>{
-				if(that.username == item.username && that.password == item.password){
-					this.$router.push('/mine/personal')
-                    Toast("登录成功")
-				}else{
-					Toast("登录失败")
-				}
-			})
+            if(storage){
+              var storageObj = JSON.parse(storage);
+                    storageObj.forEach(item=>{
+                    if(that.username == item.username && that.password == item.password){
+                        this.$router.push('/mine/personal')
+                        Toast("登录成功")
+                    }else{
+                        Toast("登录失败")
+                    }
+                })
+            }else{
+                Toast("登录失败")
+            } 
 		}
     }
 }

@@ -52,9 +52,9 @@ export default {
         if(!validatephone.test(this.username)){
           Toast('请输入正确的手机号')
         }else{
-          var validatepassword = /^\S{3,20}$/g;
+          var validatepassword = /^\S{5,}$/g;
           if(!validatepassword.test(this.password)){
-            Toast("请输入3-20位非空白字符")
+            Toast("请输入5位以上密码")
           }else{
             Toast('注册成功')
             this.updateStorage()

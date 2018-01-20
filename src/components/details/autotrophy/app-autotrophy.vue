@@ -18,7 +18,7 @@
                         <p class="xp">
                             {{es.introduce}}
                         </p>
-                        <i class="yo-ico" v-trans-ition>&#xe625;</i>
+                        <!-- <i class="yo-ico" v-trans-ition>&#xe625;</i> -->
                   </div>
                  
             </div>

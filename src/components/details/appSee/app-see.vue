@@ -7,29 +7,14 @@
        <div class="seeLeft swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide df">
-                     <dl class="let">
+                     <dl class="let" v-for="isDa in isDas" :key="isDa.id">
                                 <dt>
-                                    <img src="http://img04.aomygod.com/15aa6e76aaf_2_07d68bcd1a3f2aa6556cc72caa6d4f67_800x800.jpeg!m2"/>
+                                    <img :src="isDa.img"/>
 
                                 </dt>
-                                <dd>浪琴( LONGINES )康铂系列机械男表L2.785.4.56.6</dd>
-                                <p>￥<span>13572.00</span></p>
-                    </dl>
-                     <dl class="let">
-                                <dt>
-                                    <img src="http://img04.aomygod.com/15aa6e76aaf_2_07d68bcd1a3f2aa6556cc72caa6d4f67_800x800.jpeg!m2"/>
-
-                                </dt>
-                                <dd>浪琴( LONGINES )康铂系列机械男表L2.785.4.56.6</dd>
-                                <p>￥<span>13572.00</span></p>
-                    </dl>
-                    <dl class="let">
-                                <dt>
-                                    <img src="http://img04.aomygod.com/15aa6e76aaf_2_07d68bcd1a3f2aa6556cc72caa6d4f67_800x800.jpeg!m2"/>
-
-                                </dt>
-                                <dd>浪琴( LONGINES )康铂系列机械男表L2.785.4.56.6</dd>
-                                <p>￥<span>13572.00</span></p>
+                                <dd>{{isDa.title}}</dd>
+                                <p>￥<span>{{isDa.price1}}</span></p>
+                               
                     </dl>
                 </div>
             </div>
@@ -40,10 +25,28 @@
 </template>
 <script>
 import Swiper from 'swiper'
+import axios from 'axios'
 export default {
-  name:'app-see',
+   name:'app-see',
+   data:function(){
+      return{
+           isDas:[]
+      }
+   },
+   methods:{
+         
+         getData(){
+             let that = this;
+            axios.get('/src/falseData/false.json').then((response)=>{       
+                that.isDas = response.data.goodlists
+            })
+         }
+   },
+   created(){
+         this.getData()
+   },
    mounted(){
-       	
+     
              var swiper = new Swiper('.swiper-container', {
                  loop:true
              });        
