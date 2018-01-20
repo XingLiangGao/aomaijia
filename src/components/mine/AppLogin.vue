@@ -53,17 +53,19 @@ export default {
 		getDate(){
 			let that = this
 			var storage = window.localStorage.date;
-			var storageObj = JSON.parse(storage);
-
-			// console.log(storageObj)
-			storageObj.forEach(item=>{
-				if(that.username == item.username && that.password == item.password){
-					this.$router.push('/mine/personal')
-                    Toast("登录成功")
-				}else{
-					Toast("登录失败")
-				}
-			})
+            if(storage){
+              var storageObj = JSON.parse(storage);
+                    storageObj.forEach(item=>{
+                    if(that.username == item.username && that.password == item.password){
+                        this.$router.push('/mine/personal')
+                        Toast("登录成功")
+                    }else{
+                        Toast("登录失败")
+                    }
+                })
+            }else{
+                Toast("登录失败")
+            } 
 		}
     }
 }

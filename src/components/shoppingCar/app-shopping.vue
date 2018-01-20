@@ -29,7 +29,7 @@
                         </router-link>    
                     </div>
                 </div>
-                <AppShopnav   v-for = "item in car " :key="item.i" :info="item" ></AppShopnav>
+                <AppShopnav   v-for = "item in car " :key="item.id" :info="item" ></AppShopnav>
                 <AppShopbotm v-if="car.length" ></AppShopbotm>
         </div>     
           
