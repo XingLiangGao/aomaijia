@@ -11,7 +11,7 @@
                       <p>{{info.title}}</p>
                       <nav>
                             <span>￥{{info.price1}}</span>
-                            <span  @click='removeGood(info.id)'>删除</span>
+                            <span  @click='removeGood(info.id)' class="yo-ico sh">&#xe606;</span>
                             <ul>
                                 <li class="yo-ico" @click='decrement(info.id)'>-</li>
                                 <li>{{$store.state.num}}</li>

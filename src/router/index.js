@@ -79,7 +79,9 @@ export default new Router({
   ],
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
+      console.log(savedPosition)
       return savedPosition
+      console.log(1)
     } else {
       return { x: 0, y: 0 }
     }

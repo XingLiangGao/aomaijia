@@ -15,11 +15,11 @@
         "mold":"自营",
       "evaluatenum":"31",
        "img":"https://img04.aomygod.com/15d97de589f_2_2719e75f1547f0ac9407eaf295d1bf8f_800x800.jpeg!m2",
-       "banner": {
-          "banner1": "http://img04.aomygod.com/15d97de589f_2_2719e75f1547f0ac9407eaf295d1bf8f_800x800.jpeg!l2",
-          "banner2": "http://img04.aomygod.com/15d97de5706_2_886fb286379bf098484692848b81095b_800x800.jpeg!l5",
-          "banner3": "http://img04.aomygod.com/15d97de589f_2_2719e75f1547f0ac9407eaf295d1bf8f_800x800.jpeg!l2"
-       }
+       "banner":[
+           "http://img04.aomygod.com/15d97de589f_2_2719e75f1547f0ac9407eaf295d1bf8f_800x800.jpeg!l2",
+           "http://img04.aomygod.com/15d97de5706_2_886fb286379bf098484692848b81095b_800x800.jpeg!l5",
+           "http://img04.aomygod.com/15d97de589f_2_2719e75f1547f0ac9407eaf295d1bf8f_800x800.jpeg!l2"
+       ]
     },
     {
       "id":1,

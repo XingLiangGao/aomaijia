@@ -11,7 +11,7 @@
                 </div>
         </div>
         <div class="shopp">
-                <div class="shopp-head"  v-if="car.length">
+                <div class="shopp-head">
                     <ul>
                     <li class="yo-ico">&#xe60e;</li>
                     <li>奥买家全球旗舰店</li> 
@@ -66,8 +66,9 @@ export default {
 <style lang="scss" scoped>
 .shopp{
     width:100%;
-    height:7rem;
+    height:6.27rem;
     background:#eee;
+   
 }
 .details{
     width:100%;
@@ -77,8 +78,11 @@ export default {
     justify-content:space-between;
     align-items:center;
     font-size: 16px;
-    
+    position:fixed;
+    top:0;
+   
     .return{
+           
             padding-left:0.1rem;
             display: block;
             width:0.5rem;
