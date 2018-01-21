@@ -40,8 +40,8 @@ export default {
   },
   methods:{
     exit(){
-        this.date.push({username:this.username,password:this.password})
-        localStorage.date=JSON.stringify(this.date)
+        var storage=window.localStorage;
+        storage.removeItem("date");
         this.$router.push('/mine')
     }
   },

@@ -14,8 +14,9 @@
             </div>
             <div class="two">
                 <i class="yo-ico">&#xe603;</i>
-                <mt-field placeholder="请输入密码" v-model="password"></mt-field>
-                <i class="yo-ico eye" style="font-size:28px">&#xe61d;</i>
+                <mt-field id="pass_word" :type="inputType" placeholder="请输入密码" v-model="password"></mt-field>
+                <i v-if="iseye" class="yo-ico eye" @click="eye(), iseye=!iseye" style="font-size:28px">&#xe61d;</i>
+                <i v-else class="yo-ico eye" @click="eye(), iseye=!iseye" style="font-size:28px">&#xe624;</i>
             </div>
             <div>
                 <i class="yo-ico">&#xe621;</i>
@@ -35,20 +36,28 @@ export default {
   name:"app-register",
   data(){
     return {
-       username: '',  
-       password: '',  
-       code:'',
-       date:JSON.parse(localStorage.date?localStorage.date:'[]')
+        username: '',  
+        password: '',  
+        code:'',
+        iseye: true,
+        inputType:"password",
+        date:[]
     }
   },   
   methods:{
-    
+    eye() {
+     if(this.inputType=="password"){
+             this.inputType="text" 
+     }else{
+     this.inputType="password"
+     }
+    },
     register(){
       if(this.username==''|| this.password==''){
         Toast('请填写完整信息')
       }
       else {
-        var validatephone = /^1[3|4|5|8][0-9]\d{4,8}$/;
+        var validatephone = /^1[3|4|5|7|8][0-9]\d{4,8}$/;
         if(!validatephone.test(this.username)){
           Toast('请输入正确的手机号')
         }else{
@@ -66,9 +75,7 @@ export default {
     },
     updateStorage(){
       this.date.push({username:this.username,password:this.password})
-      console.log(this.date)
       localStorage.date = JSON.stringify(this.date)
-      
     },
     getDate(){
       let that = this

@@ -75,7 +75,6 @@
 	            height: .48rem;
 	            display:flex;
 	            background:#fff;
-	            border-bottom: 1px solid #e5e5e5;
 	            div{
 	                display: flex;
 	                justify-content: center;

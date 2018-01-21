@@ -11,7 +11,7 @@
             </div> 
             <AppMessage :type= "type" :ele="eleIDs"/>
                        
-            <DetailsBottom/>   
+            <DetailsBottom :eleId="eleIDs"/>   
       </div>
 </template>
 <script>

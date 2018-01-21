@@ -171,6 +171,31 @@
   .app-position {
     position: relative;
     overflow: scroll;
+    input{
+      outline: none;
+      border: 1px solid #cccccc40;
+      padding-left: 10px;
+      width: 300px;
+      height: 30px;
+      font-size: #cccccc40;
+      letter-spacing: 2px;
+    }
+    .mint-header{
+      border-bottom: 1px solid #cccccc40;
+    }
+    .letter-item{
+      >div{
+        height: 50px;
+        line-height: 50px;
+      }
+      div:first-child{
+        line-height: 50px;
+      }
+    }
+    .search-city{
+      text-align: left;
+      padding: 10px 30px;
+    }
   }
   .letter-item {
     > div:first-child {

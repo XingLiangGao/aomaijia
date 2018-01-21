@@ -8,7 +8,8 @@ const state ={
       num :1,
       anount:0,
       isDis:false,
-      city:'北京'
+      city:'北京',
+      collects: []
 }
 const getters = {
       tarif(state){//税费 

@@ -7,19 +7,40 @@
             </div>
         </div>
         <div class="ul-content">
-            <div class="ul-li">
-                <img src="//img04.aomygod.com/15c3ec56d4d_2_ffa8e1462cf19a3a300a1e0ddf038bf3_800x800.jpeg!m1" alt="">
+            <div class="ul-li" v-for="item in collects" :key="item.id">
+                <img :src="item.img" alt="">
                 <div class="li-right">
-                    <h4>Barbie/芭比 娃娃梦幻衣橱手提礼包 芭比娃娃换...</h4>
-                    <p><span>￥195</span><strong>取消收藏</strong></p>
+                    <h4>{{item.title}}</h4>
+                    <p><span>￥{{item.price1}}</span><strong @click="clearCollect(item.id)">取消收藏</strong></p>
                 </div>
             </div>
         </div>
 	</div>
 </template>
 <script>
+import {mapState} from 'vuex'
+import axios from 'axios'
 export default {
-	name: 'app-collect'
+	name: 'app-collect',
+    computed:{
+      ...mapState(['collects'])
+      
+    },
+    created() {
+        console.log(this.$store.state.collects)
+    },
+    methods: {
+        clearCollect(id) {
+          console.log(this.$store.state.collects)
+          console.log(id)
+            this.$store.state.collects.forEach((item,index) => {
+                if(id === item.id){
+                    this.$store.state.collects.splice(index,1)
+                }
+                
+            })
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -51,7 +72,7 @@ export default {
             background: #fff;
             padding: 14px 10px;
             display: flex;
-            justify-content: space-between;
+            margin-top: 10px;
             img{
                 width: 77px;
                 height: 77px;
@@ -60,6 +81,7 @@ export default {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                width: 100%;
                 span{
                     color: #F03468;
                     font-size: 18px;
