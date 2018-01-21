@@ -1,7 +1,7 @@
 <template>
       <!--轮播图-->
         <div class="app-banner xc">
-             <div class="bacic-banner swiper-container">
+             <!-- <div class="bacic-banner swiper-container">
                   <div class="swiper-wrapper">
                         <div  class="swiper-slide" v-for="image in images" :key="image.id">
                               <img :src="image"  :alt="image.id"/>
@@ -9,8 +9,12 @@
                           
                         
                   </div>
-             </div> 
-            
+             </div>  -->
+            <mt-swipe :auto="0" :showIndicators="false" :speed="100" :continuous="false">
+				    <mt-swipe-item  v-for="image in images" :key="image.id">
+				  		<img :src="image"  :alt="image.id"/>
+				  </mt-swipe-item>
+				</mt-swipe>
         </div> 
          
 </template>
@@ -36,7 +40,9 @@ export default {
            
       },
       updated(){
-                  var mySwiper = new Swiper('.bacic-banner',{
+                  new Swiper('.bacic-banner',{
+                  slidesPerView:1,
+		     
                   loop:true})
                         
       },

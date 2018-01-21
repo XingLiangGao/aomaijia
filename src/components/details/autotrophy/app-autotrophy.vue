@@ -14,12 +14,12 @@
                        </li>
                        </ul>
                   </nav>
-                  <div class="elasticity">
+                <div class="elasticity">
                         <p class="xp">
                             {{es.introduce}}
                         </p>
-                        <!-- <i class="yo-ico" v-trans-ition>&#xe625;</i> -->
-                  </div>
+                        <!-- <i class="yo-ico" v-trans-ition>&#xe625;</i>-->
+                  </div> 
                  
             </div>
               <!--运费说明-->

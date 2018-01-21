@@ -45,7 +45,7 @@ export default {
    created(){
          this.getData()
    },
-   mounted(){
+   updated(){
      
              var swiper = new Swiper('.swiper-container', {
                  loop:true
