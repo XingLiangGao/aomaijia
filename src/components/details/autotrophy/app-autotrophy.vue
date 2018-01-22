@@ -91,7 +91,7 @@
                         </ul>
                         <nav @click='addGood({id:es.id,title:es.title,price1:es.price1,img:es.img,tariff:es.tariff,freight:es.freight})'>
                         <span  @click.once="shoppingCar(),$store.state.isDis=!$store.state.isDis" > 
-                              加入购物车{{$store.state.isDis}}
+                              加入购物车
                              </span>
                         </nav>
                 </div>    

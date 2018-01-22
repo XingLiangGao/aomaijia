@@ -4,22 +4,22 @@
                    <div class="seeyou">
                                        看了又看
                    </div>
-       <div class="seeLeft swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide df">
-                     <dl class="let" v-for="isDa in isDas" :key="isDa.id">
-                                <dt>
-                                    <img :src="isDa.img"/>
-
-                                </dt>
-                                <dd>{{isDa.title}}</dd>
-                                <p>￥<span>{{isDa.price1}}</span></p>
-                               
-                    </dl>
-                </div>
+        <div class="seeLeft swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide df" v-for="isDa in isDas" :key="isDa.id">
+              <dl class="let">
+                      <dt>
+                          <img :src="isDa.img"/>
+                      </dt>
+                      <dd>{{isDa.title}}</dd>
+                      <p>￥<span>{{isDa.price1}}</span></p>        
+              </dl>
             </div>
-      
-    </div>
+           
+          </div>
+       
+      </div>
+
 </div>
 </div>
 </template>
@@ -34,7 +34,6 @@ export default {
       }
    },
    methods:{
-         
          getData(){
              let that = this;
             axios.get('/src/falseData/false.json').then((response)=>{       
@@ -46,11 +45,12 @@ export default {
          this.getData()
    },
    updated(){
-     
-             var swiper = new Swiper('.swiper-container', {
-                 loop:true
-             });        
-       }
+         new Swiper('.seeLeft ', {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          
+        });
+    }
 }
 </script>
 <style lang="scss" scoped>

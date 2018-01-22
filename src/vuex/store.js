@@ -8,8 +8,7 @@ const state ={
       num :1,
       anount:0,
       isDis:false,
-      city:'北京',
-      collects: []
+      city:'北京'
 }
 const getters = {
       tarif(state){//税费 
@@ -25,7 +24,7 @@ const getters = {
           let money = 0;
           state.car.forEach(inf=> {
             if(inf.isSelected){
-              money+=parseInt((inf.price1*state.num)+(inf.tariff*state.num)) 
+              money+=parseFloat((inf.price1*inf.num)+(inf.tariff*inf.num)) 
             }
          
         });
@@ -52,11 +51,11 @@ const mutations = {
       addGood(state,{id,title,price1,img,tariff,freight}){//获取到parms 数据 
       let isHas = state.car.some(item=>{//判断数据是否存在,因为用的some方法所以只要有一个为true就返回true 还有every方法 全部为true才返回
             if(item.id == id){
+              item.num++;
               return true;
             }else{
               return false;
             }
-            localStorage.car = JSON.stringify(state.car)
       })
       if(!isHas){//如果不为true 则把id 返回到 state.car
         state.car.push({id,title,price1,tariff,freight,img,num:1,isSelected:true})
@@ -72,6 +71,20 @@ const mutations = {
           if(state.num<=0){
             state.num = 1
             } 
+      },
+      reduceGood(state,{id}){
+        let len =  state.car;
+        for (let i = 0; i < len.length; i++) {
+          if(state.car[i].id==id){ //如果state.car[i].id 等于我传进来的地
+               state.car[i].num --
+               if(state.car[i].num == 0){//如果state.car.num  等于0 则删除
+                  state.car.splice(i,1)
+               }
+               break;
+          }   
+        } 
+         //为了与数据里的car对应
+       localStorage.car = JSON.stringify(state.car)
       },
       removeGood(state,id){
         let len = state.car.length
@@ -101,8 +114,7 @@ const actions = {
      setTimeout(() => {//模拟ajax请求数据
           let result = 'ok'
           if(result == 'ok'){//如果成功则返回 addGood方法 和数据
-              commit('addGood',parms)
-            
+              commit('addGood',parms) 
           }
       }, 300); 
     },
@@ -125,6 +137,15 @@ const actions = {
          
       },300)   
   },
+  reduceGood({commit},params){
+    setTimeout(()=>{  // 模拟发送a jax请求
+        let result = 'ok'
+        if(result == 'ok'){
+            commit('reduceGood',params)
+        }
+       
+    },300)  
+   },
   getPosition({commit}){
 		console.log(getPosition)
 		getPosition((city)=>{

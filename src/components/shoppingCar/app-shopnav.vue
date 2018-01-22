@@ -13,9 +13,10 @@
                             <span>￥{{info.price1}}</span>
                             <span  @click='removeGood(info.id)' class="yo-ico sh">&#xe606;</span>
                             <ul>
-                                <li class="yo-ico" @click='decrement(info.id)'>-</li>
-                                <li>{{$store.state.num}}</li>
-                                <li class="yo-ico" @click='increment'>+</li>  
+                                <li class="yo-ico" @click='reduceGood({id:info.id})'>-</li>
+                                <li>{{info.num}}</li>
+                                <!-- {{$store.state.num}} -->
+                                <li class="yo-ico" @click='addGood({id:info.id})'>+</li>  
                             </ul>
                       </nav>
                   </div>
@@ -30,8 +31,8 @@ export default {
    name:'app-shopnav',
    props:['info'],
    methods:{
-        ...mapActions(['addGood']),
-         ...mapMutations(['decrement','increment','shoppingCar','removeGood']),  
+        ...mapActions(['addGood','reduceGood']),
+        ...mapMutations(['decrement','increment','shoppingCar','removeGood']),  
      },    
    computed:{   
       

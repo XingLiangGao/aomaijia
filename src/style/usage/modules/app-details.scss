@@ -452,13 +452,13 @@ div{
                @include flexbox();
              .df{
                @include flexbox();
-               
+               margin-right:20px!important; 
              }
              
                
             .let{
                  width:1.10rem!important;
-                 margin-right: 0.16rem;
+                 margin-right: 0.15rem;
                  height:1.8rem;
                 // padding: 0 0.1rem;
                 // @include align-items(center);
@@ -480,11 +480,15 @@ div{
                     text-overflow:ellipsis;
                     display:-webkit-box; 
                     -webkit-box-orient:vertical;
-                    -webkit-line-clamp:2; 
+                    -webkit-line-clamp:2;
+                    color: #000;
+                    background: #fff;
+                    padding-right: 10px;
                 }
                 p{
                     font-size: 14px;
                     color: #f03468;
+                    background: #fff;
                 }
             }    
         }

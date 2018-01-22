@@ -3,20 +3,20 @@
         <div class="top">
             <router-link to="list" class="yo-ico">&#xf07d;</router-link>
             <div>
-                <span @click="isShow=false">清除筛选</span>
+                <span @click="isShow=false,ispp=true,isjj=true,isback=1,isbackjj=1">清除筛选</span>
                 <router-link to="list" tag="span">确定</router-link>
             </div>
         </div>
         <ul>
-            <li><span>只显示有货</span><strong @click="isShow=!isShow" :class="{active : isShow == true}"></strong></li>
+            <li @click="isShow=!isShow"><span>只显示有货</span><strong :class="{active : isShow == true}"></strong></li>
             <li @click="ispp=!ispp"><span>品牌</span><i class="yo-ico">&#xf2ae;</i></li>
-            <li class="content"><span>Adidas/阿迪达斯</span></li>
-            <li class="content"><span>Amoie Stagione/恋爱季</span></li>
-            <li class="content"><span>Gramont des moulins/佳梦磨坊</span></li>
+            <li @click="isback='isback1'" class="content" :class="{'con_active':ispp, 'con_back':isback=='isback1'}"><span>Adidas/阿迪达斯</span></li>
+            <li @click="isback='isback2'" class="content" :class="{'con_active':ispp, 'con_back':isback=='isback2'}"><span>Amoie Stagione/恋爱季</span></li>
+            <li @click="isback='isback3'" class="content" :class="{'con_active':ispp, 'con_back':isback=='isback3'}"><span>Gramont des moulins/佳梦磨坊</span></li>
             <li @click="isjj=!isjj""><span>价格</span><i class="yo-ico">&#xf2ae;</i></li>
-            <li class="content"><span>0-3000</span></li>
-            <li class="content"><span>3000-6000</span></li>
-            <li class="content"><span>6000-12000</span></li>
+            <li @click="isbackjj='isback1'" class="content" :class="{'pri_active':isjj, 'con_back':isbackjj=='isback1'}"><span>0-3000</span></li>
+            <li @click="isbackjj='isback2'" class="content" :class="{'pri_active':isjj, 'con_back':isbackjj=='isback2'}"><span>3000-6000</span></li>
+            <li @click="isbackjj='isback3'" class="content" :class="{'pri_active':isjj, 'con_back':isbackjj=='isback3'}"><span>6000-12000</span></li>
         </ul>
     </div>
 </template>
@@ -26,11 +26,17 @@ export default {
   name:'app-list-filtrate',
   data() {
       return {
-          isShow:false,
-          ispp:false,
-          isjj:false
+          isShow: false,
+          ispp: true,
+          isjj: true,
+          isback: 1,
+          isbackjj: 1
       }
+  },
+  mouted() {
+    console.log(this.isback)
   }
+
 }
 </script>
 
@@ -89,6 +95,13 @@ export default {
                 border-radius: 50%;
             }
         }
+        .con_active{
+            display: none;
+        }
+        .pri_active{
+            display: none;
+        }
+        .con_back{ background: #F03468!important; color: #fff!important; }
         .content{
             background: #fff;
             font-size: 14px;

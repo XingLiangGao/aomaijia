@@ -1,15 +1,6 @@
 <template>
       <!--轮播图-->
         <div class="app-banner xc">
-             <!-- <div class="bacic-banner swiper-container">
-                  <div class="swiper-wrapper">
-                        <div  class="swiper-slide" v-for="image in images" :key="image.id">
-                              <img :src="image"  :alt="image.id"/>
-                        </div>
-                          
-                        
-                  </div>
-             </div>  -->
             <mt-swipe :auto="0" :showIndicators="false" :speed="100" :continuous="false">
 				    <mt-swipe-item  v-for="image in images" :key="image.id">
 				  		<img :src="image"  :alt="image.id"/>
@@ -30,19 +21,12 @@ export default {
             }
       },
       methods:{
-            // getImage(){
-            //       let that = this
-            //       axios.get('/src/falseData/banner.json',{}).then((response)=>{
-            //             that.images = response.data.data.billboards
-            //             //    console.log( response.data.data.billboards.imageUrl,666)   
-            //       })
-            // }
+           
            
       },
       updated(){
                   new Swiper('.bacic-banner',{
                   slidesPerView:1,
-		     
                   loop:true})
                         
       },
