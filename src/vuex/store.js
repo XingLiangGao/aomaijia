@@ -8,6 +8,7 @@ const state ={
       num :1,
       anount:0,
       isDis:false,
+      collects: [],
       city:'北京'
 }
 const getters = {

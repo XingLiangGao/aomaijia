@@ -10,7 +10,7 @@
 			</div>
 			<div class="list-footer swiper-container" >
 				<ul class="swiper-wrapper">
-					<router-link tag="li" :to="{name:'detailshead',params:{userId:goodlist.id}}" class="swiper-slide"  v-for="(goodlist,i) in goodlists">
+					<router-link tag="li" :to="{name:'detailshead',params:{userId:goodlist.id}}" class="swiper-slide"  v-for="(goodlist,i,index) in goodlists" :key="index">
 						<div class="list-img">
 							<img :src="goodlist.img"/>
 						</div>
@@ -31,7 +31,7 @@
 			</div>
 			<div class="list-footer swiper-container" >
 				<ul class="swiper-wrapper">
-					<router-link tag="li" :to="{name:'detailshead',params:{userId:goodlist.id}}" class="swiper-slide"  v-for="(goodlist,i) in goodlists">
+					<router-link tag="li" :to="{name:'detailshead',params:{userId:goodlist.id}}" class="swiper-slide"  v-for="(goodlist,i,index) in goodlists" :key="index">
 						<div class="list-img">
 							<img :src="goodlist.img"/>
 						</div>
@@ -52,7 +52,7 @@
 			</div>
 			<div class="list-footer swiper-container" >
 				<ul class="swiper-wrapper">
-					<router-link tag="li" :to="{name:'detailshead',params:{userId:goodlist.id}}" class="swiper-slide"  v-for="(goodlist,i) in goodlists">
+					<router-link tag="li" :to="{name:'detailshead',params:{userId:goodlist.id}}" class="swiper-slide"  v-for="(goodlist,i,index) in goodlists" :key="index">
 						<div class="list-img">
 							<img :src="goodlist.img"/>
 						</div>

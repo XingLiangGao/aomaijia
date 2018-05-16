@@ -33,13 +33,7 @@ export default {
    methods:{
         ...mapActions(['addGood','reduceGood']),
         ...mapMutations(['decrement','increment','shoppingCar','removeGood']),  
-     },    
-   computed:{   
-      
-   },
-   mounted:{
-      
-  }
+     }
 }
 </script>
 <style lang="scss" scoped>

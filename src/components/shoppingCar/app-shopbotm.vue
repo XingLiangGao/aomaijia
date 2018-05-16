@@ -13,7 +13,7 @@
                       (运费：<span>{{freights}}</span> ,税费 <span>{{tarif}}</span>)
                   </p>
              </div>
-             <nav>
+             <nav @click="toResult">
                   结算 (<span>{{$store.state.car.length}}</span>) 
              </nav>
         </div>   
@@ -44,7 +44,16 @@ export default {
        }
     },
    methods:{
-          ...mapActions(['selectedGood'])
+          ...mapActions(['selectedGood']),
+
+          toResult() {
+            var storage = window.localStorage.date;
+            if(storage){
+                alert('结算成功');
+            } else {
+                alert('请先登录再结算');
+            }
+          }
     }
 }
 </script>
